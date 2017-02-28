@@ -1,0 +1,14 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "license": "MIT",
+  "scripts": {
+    "pug-watch": "pug cv.pug -w"
+  },
+  "dependencies": {
+    "normalize.css": "^5.0.0",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}

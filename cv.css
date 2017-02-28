@@ -1,0 +1,33 @@
+/*General Styles*/
+p{
+    margin: 0.2rem;
+}
+/************************************************/
+
+/*General Infos*/
+.general-infos{
+    text-align: center;
+}
+/************************************************/
+
+/*Objective*/
+
+/************************************************/
+
+/*Experiences*/
+
+/************************************************/
+
+/*Education and Languages*/
+
+/************************************************/
+
+/*Education and Languages*/
+
+.skills--skill-list li {
+    display: inline;
+}
+.skills--skill-list li::after{
+    content: ", "
+}
+/************************************************/
