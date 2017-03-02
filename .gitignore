@@ -1,3 +1,5 @@
 node_modules/
 
-cv.html
+settings.json
+
+src/*.html
