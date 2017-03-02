@@ -1,0 +1,106 @@
+/*General Styles*/
+
+@import url('https://fonts.googleapis.com/css?family=Average|Fjalla+One');
+body {
+    max-width: 80%;
+    margin: 0 auto;
+    font-family: 'Average', serif;
+}
+
+p {
+    margin: 0.2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1rem;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+
+/************************************************/
+
+
+/*General Infos*/
+
+.general-infos .general-infos--name {
+    font-size: 2.5rem;
+}
+
+.general-infos {
+    text-align: center;
+}
+
+.general-infos a {
+    display: block;
+}
+
+section .section-main-title {
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+    border-bottom: 1px solid #cdcdcd;
+}
+
+
+/************************************************/
+
+
+/*Objective*/
+
+
+/************************************************/
+
+
+/*Experiences*/
+
+.jobs--job {
+    --margin: 1rem;
+    margin-top: var(--margin);
+    margin-bottom: var(--margin);
+}
+
+.jobs .jobs--job--position {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.jobs .jobs--job--infos-container {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+
+/************************************************/
+
+
+/*Education and Languages*/
+
+.education .education--college p time {
+    font-weight: bold;
+}
+
+
+/************************************************/
+
+
+/*Education and Languages*/
+
+.skills--skill-list {
+    padding: 0;
+}
+
+.skills--skill-list li {
+    display: inline;
+}
+
+.skills--skill-list li:not(:last-child)::after {
+    content: ", "
+}
+
+
+/************************************************/
