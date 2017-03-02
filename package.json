@@ -5,9 +5,13 @@
   "repository": {},
   "license": "MIT",
   "scripts": {
-    "pug-watch": "pug cv.pug -w"
+    "it": "pug src/index.pug -w",
+    "staff": "pug src/cv-staff.pug -w",
+    "server": "gulp server"
   },
   "dependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
     "normalize.css": "^5.0.0",
     "pug-cli": "^1.0.0-alpha6"
   }
