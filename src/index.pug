@@ -10,10 +10,12 @@
 
 html
     head
+        title #{name}
         style
             include ../node_modules/normalize.css/normalize.css
-            include cv.css
-            include cv-print.css
+        link(rel="stylesheet" type="text/css" href="cv.min.css")
+        link(rel="stylesheet" type="text/css" href="cv-print.min.css")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
     body
         section.general-infos
             h1.general-infos--name #{name}
