@@ -36,22 +36,7 @@ gulp.task('pugBuild', function buildHTML() {
         .pipe(gulp.dest('dist/'))
 });
 
-gulp.task('server', function () {
-
-    //Iniciando o servidor
-    browser.init({
-        server: {
-            baseDir: 'src'
-        }
-    });
-
-    //Escuta de alterações
-    gulp
-        .watch('src/**/*.*')
-        .on('change', browser.reload);
-})
-
-gulp.task('serverDIST', function () {
+gulp.task('sv', function () {
 
     //Iniciando o servidor
     browser.init({

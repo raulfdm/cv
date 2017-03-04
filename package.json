@@ -5,9 +5,9 @@
   "repository": {},
   "license": "MIT",
   "scripts": {
-    "it": "pug src/index.pug -w",
-    "staff": "pug src/cv-staff.pug -w",
-    "server": "gulp server"
+    "sv": "gulp server",
+    "build": "gulp build",
+    "deploy": "gulp deploy"
   },
   "dependencies": {
     "normalize.css": "^5.0.0"
