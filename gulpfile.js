@@ -7,7 +7,7 @@ const gulp = require('gulp'),
     rename = require('gulp-rename');
 
 gulp.task('build', ['clean'], function () {
-    gulp.start('pug', 'cssmin')
+    gulp.start('pugBuild', 'cssmin')
 });
 
 gulp.task('deploy', function () {
@@ -29,7 +29,7 @@ gulp.task('cssmin', function() {
         .pipe(gulp.dest('dist/'))
 });
 
-gulp.task('pug', function buildHTML() {
+gulp.task('pugBuild', function buildHTML() {
     return gulp
         .src('src/*.pug')
         .pipe(pug({}))
@@ -64,4 +64,9 @@ gulp.task('serverDIST', function () {
     gulp
         .watch('dist/**/*.*')
         .on('change', browser.reload);
+    gulp
+        .watch('src/**/*.pug',['pugBuild'])
+        .on('change', function(){});
+
+
 })
