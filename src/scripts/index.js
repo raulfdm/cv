@@ -1,8 +1,11 @@
-const combo = (()=> {
+const combo = (() => {
 
     let sequence = [];
     let backspaceCount = 0;
-    return function(ev) {   
+    const resetSequence = () => {
+        sequence = [];
+    };
+    return function (ev) {
         if (ev.code === 'Backspace') {
             if (backspaceCount === 2) {
                 resetSequence()
@@ -41,9 +44,6 @@ const changePage = () => {
     } else {
         window.location.href = locationGithub.origin + locationGithub.itCV;
     }
-}
-const resetSequence = () => {
-    sequence = [];
 }
 
 document
