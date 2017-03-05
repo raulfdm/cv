@@ -1,14 +1,16 @@
 /*General Styles*/
 
-@import url('https://fonts.googleapis.com/css?family=Average|Fjalla+One');
 body {
     max-width: 80%;
     margin: 0 auto;
-    font-family: 'Average', serif;
+    font-family: 'Lora', serif;
 }
 
 p {
     margin: 0.2rem;
+}
+a{
+    color: black;
 }
 
 h1,
@@ -18,7 +20,7 @@ h4,
 h5,
 h6 {
     font-size: 1rem;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -35,8 +37,13 @@ h6 {
     text-align: center;
 }
 
-.general-infos a {
-    display: block;
+.general-infos .general-infos--links a{
+    display: inline-block;
+}
+
+.general-infos .general-infos--cellphone {
+    color: black;
+    text-decoration: none;
 }
 
 section .section-main-title {
