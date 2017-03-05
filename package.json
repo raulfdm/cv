@@ -5,7 +5,7 @@
   "repository": {},
   "license": "MIT",
   "scripts": {
-    "sv": "gulp sv",
+    "sv": "gulp build && gulp sv",
     "build": "gulp build",
     "deploy": "gulp deploy",
     "build-deploy": "gulp build-deploy"
