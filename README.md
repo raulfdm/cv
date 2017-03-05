@@ -35,3 +35,7 @@ $ yarn build-deploy
 #if you use NPM
 $ npm run-script build-deploy
 ```
+
+## Secret move
+
+In this case, I create a two CVs, one for development jobs and the other to staff jobs. To change without type an url, you just need to press: `Shift+S+T+F` and you will be redirected to **cv staff**. If you wrong the "combo", you can reset pressing **Backspace** 3 times.
