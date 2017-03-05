@@ -9,9 +9,9 @@ const gulp = require('gulp'),
     babel = require('gulp-babel'),
     sequence = require('gulp-sequence');
 
-gulp.task('build-deploy', sequence('build','deploy'))
+gulp.task('build-deploy', sequence('build', 'deploy'))
 
-gulp.task('build',sequence('clean','pugBuild'))
+gulp.task('build', sequence('clean', 'pugBuild'))
 
 gulp.task('deploy', function () {
     return gulp
@@ -57,11 +57,16 @@ gulp.task('pug', function buildHTML() {
 
 gulp.task('sv', function () {
 
-    //Iniciando o servidor
+    //Init the server
     browser.init({
         server: {
-            baseDir: 'dist'
-        }
+            baseDir: 'dist',
+            index: "index.html",
+            routes: {
+                "/cv": "dist"
+            }
+        },
+        startPath: '/cv'
     });
 
     //Escuta de alterações
@@ -75,5 +80,7 @@ gulp.task('sv', function () {
 });
 
 gulp.task('pugBuild', callback => {
-    sequence('cleanMinified', ['babel', 'cssmin'], 'pug')(callback)
+    sequence('cleanMinified', [
+        'babel', 'cssmin'
+    ], 'pug')(callback)
 })
