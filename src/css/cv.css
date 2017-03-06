@@ -23,6 +23,11 @@ h6 {
     font-family: 'Open Sans', sans-serif;
 }
 
+body>section {
+    --margins: 2rem;
+    margin-bottom: var(--margins);
+}
+
 
 /************************************************/
 
