@@ -1,19 +1,12 @@
-- let name = "Raul Felipe de Melo";
+extends ./template/default.pug
 
-html
-    head
-        title #{name}
-        link(href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet")
-        link(href="index.min.css" rel="stylesheet")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    body
-        script
-            include analytics/staff.js
+block analytics
+    script
+        include analytics/staff.js
 
+block content
     include ./includes/staff/infos.pug
     include ./includes/staff/objective.pug
     include ./includes/staff/experiences.pug
     include ./includes/staff/education.pug
     include ./includes/staff/skills.pug
-
-    script(src='index.min.js')
