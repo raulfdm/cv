@@ -7,24 +7,26 @@
   "scripts": {
     "sv": "gulp build && gulp sv",
     "build": "gulp build",
-    "deploy": "gulp deploy",
-    "build-deploy": "gulp build-deploy"
+    "deploy": "gulp deploy"
   },
   "dependencies": {
     "normalize.css": "^5.0.0"
   },
   "devDependencies": {
+    "autoprefixer": "^7.0.1",
     "babel-preset-env": "^1.2.0",
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-clean": "^0.3.2",
-    "gulp-cssmin": "^0.1.7",
+    "gulp-cssnano": "^2.1.2",
     "gulp-gh-pages": "^0.5.4",
     "gulp-jsmin": "^0.1.5",
+    "gulp-postcss": "^7.0.0",
     "gulp-pug": "^3.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-sequence": "^0.4.6",
-    "pug-cli": "^1.0.0-alpha6"
+    "gulp-sourcemaps": "^2.6.0",
+    "postcss-import": "^9.1.0"
   }
 }
