@@ -24,80 +24,11 @@ html
         script
             include analytics/it.js
 
-    section.general-infos
-        h1.general-infos--name #{name}
-        p.general-infos--cellphone 
-            a(href=`tel:${cellphone}`) #{cellphone}
-        p.general-infos--address #{address}
-        p.general-infos--email 
-            a(href=`mailto:${email}?Subject=Contact`) #{email}
-        p.general-infos--links.linkedin
-            a(href=linkedinURL target="_blank") #{linkedin}
-        p.general-infos--links.personal-web-site
-            a(href=personalWebSiteURL target="_blank") #{personalWebSite}
-        p.general-infos--links.github 
-            a(href=githubURL target="_blank") #{github}
+    include ./includes/infos.pug
+    include ./includes/objective.pug
+    include ./includes/experiences.pug
+    include ./includes/education.pug
+    include ./includes/skills.pug
 
-    section.objectives
-        h2.section-main-title Objective
-        p.objectives--description
-            |Professional with more than 2 years of experience in IT. Performance front-end developer duties such as development of scripts based in JavaScript and development of web sites and API, looking for an opportunity to put in practice my knowledge, developing myself and bringing value to the company.
-        p.objectives--description
-            |Main experiences developing projects related to subjects learned in the university and also private projects, in order to solve problems in the day-by-day bases applying the technologies studied at that moment. 
-
-    section.jobs
-        h2.section-main-title Experiences
-        section.jobs--job
-            p.jobs--job--position Full-Stack developer
-            div.jobs--job--infos-container
-                p.jobs--job--company Freelancer
-                p.jobs--job--duration 2014 - current
-            p.jobs--job--description
-                |Acting as back-end and front-end developer, cope with all problems and facing all the challenges that were proposed in class, also applying that in real open-source projects using new technologies those which can be consulted in a personal profile on Github.
-        section.jobs--job
-            p.jobs--job--position Technical Support Analyst
-            div.jobs--job--infos-container
-                p.jobs--job--company Senior Systems
-                p.jobs--job--duration 2014 - 2016
-            p.jobs--job--description
-                |Customer service, answering queries about business and systems rules, reading and debugging the PL/SQL and Java routines, in order to determine mistakes reported through tickets. Responsible for analysis and implementation of projects and business internal process.
-
-    section.education
-        h2.section-main-title Education and Languages
-        section.education--college
-            p
-                time 2013 - 2017
-                - let collegeStatus = "In progress";
-                |- Systems Information - Universidade de Ribeirão Preto (UNAERP) – #{collegeStatus}
-        section.education--language
-            p 
-                b Portuguese 
-                |- Native
-            p 
-                b English 
-                |- Intermediate
-
-    section.skills
-        h2.section-main-title Skills
-        ul.skills--skill-list
-            li Javascript (ES6)
-            li NodeJS
-            li HTML
-            li CSS
-            li SASS
-            li Gulp
-            li React
-            li Bootstrap 3
-            li Regular Expression
-            li SQL Oracle
-            li NoSQL
-            li GIT
-            li SVN
-            li MVC Pattern
-            li Object Oriented Pattern
-            li RESTFull
-            li Linux
-            li Photoshop CS6
-            li MS Office
     script
         include scripts/index.min.js
