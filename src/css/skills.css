@@ -1,0 +1,12 @@
+/*Education and Languages*/
+.skills--skill-list {
+    padding: 0;
+}
+
+.skills--skill-list li {
+    display: inline;
+}
+
+.skills--skill-list li:not(:last-child)::after {
+    content: ", "
+}

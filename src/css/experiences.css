@@ -1,0 +1,16 @@
+.jobs--job {
+    --margin: 1rem;
+    margin-top: var(--margin);
+    margin-bottom: var(--margin);
+}
+
+.jobs .jobs--job--position {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.jobs .jobs--job--infos-container {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}

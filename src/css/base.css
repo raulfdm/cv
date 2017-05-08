@@ -1,0 +1,62 @@
+body {
+    max-width: 80%;
+    margin: 0 auto;
+    font-family: 'Lora', serif;
+}
+
+p {
+    margin: 0.2rem;
+}
+
+a {
+    color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body>section {
+    --margins: 2rem;
+    margin-bottom: var(--margins);
+}
+
+@media (max-width: 600px) {
+    body {
+        max-width: 95%;
+    }
+}
+
+@media (min-width: 601px) {
+    body {
+        max-width: 90%;
+    }
+}
+
+@media (min-width: 798px) {
+    body {
+        max-width: 90%;
+    }
+}
+
+@media (min-width: 960px) {
+    body {
+        max-width: 80%;
+    }
+}
+
+@media print {
+    /*General Styles*/
+    @page {
+        margin: 0
+    }
+    body {
+        max-width: 100%;
+    }
+}

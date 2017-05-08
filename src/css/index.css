@@ -1,0 +1,6 @@
+@import '../../node_modules/normalize.css/normalize.css';
+@import './base';
+@import './general-infos';
+@import './education';
+@import './experiences';
+@import './skills';
