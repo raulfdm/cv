@@ -13,9 +13,9 @@ const gulp = require('gulp'),
     postImport = require('postcss-import'),
     cssNano = require('gulp-cssnano')
 
-gulp.task('deploy', sequence('build', 'ghpages'))
+gulp.task('deploy', sequence('build','ghpages'))
 
-gulp.task('build', ['clean'], () => gulp.start('pug','babel','css'))
+gulp.task('build', sequence('clean',['pug','babel','css']))
 
 gulp.task('ghpages', () => gulp.src('./dist/**/*').pipe(ghPages()));
 
