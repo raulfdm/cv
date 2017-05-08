@@ -9,8 +9,17 @@
     font-style: italic;
 }
 
-.jobs .jobs--job--infos-container {
+.jobs--job--infos-container {
+    font-size: 1.4rem;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     font-weight: bold;
+}
+.jobs--job--duration{
+    font-size: 1.1rem;
+    margin-left: 2rem;
+}
+
+.others-experiences{
+    page-break-inside: avoid
 }
