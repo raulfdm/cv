@@ -1,34 +1,18 @@
-//Variables
 - let name = "Raul Felipe de Melo";
-- let cellphone = "+353 83 871 3722"
-- let address = "32, North Circular Road, Flat 2, Dublin 7, Ireland"
-- let email = "melo.raulf@gmail.com"
-- let personalWebSite = "rauldemelo.com.br"
-- let personalWebSiteURL = "http://rauldemelo.com.br"
-- let linkedin = "linkedin.com/in/raulfdm/en"
-- let linkedinURL = "https://www.linkedin.com/in/raulfdm/en"
-- let github = "github.com/raulfdm"
-- let githubURL = "https://github.com/raulfdm/"
-
 html
     head
         title #{name}
         link(href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet")
-        style
-            include ../node_modules/normalize.css/normalize.css
-            include css/cv.min.css
-            include css/print.min.css
-            include css/mobile.min.css
+        link(href="index.min.css" rel="stylesheet")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
     body
         script
             include analytics/it.js
 
-    include ./includes/infos.pug
-    include ./includes/objective.pug
-    include ./includes/experiences.pug
-    include ./includes/education.pug
-    include ./includes/skills.pug
+    include ./includes/index/infos.pug
+    include ./includes/index/objective.pug
+    include ./includes/index/experiences.pug
+    include ./includes/index/education.pug
+    include ./includes/index/skills.pug
 
-    script
-        include scripts/index.min.js
+    script(src="index.min.js")

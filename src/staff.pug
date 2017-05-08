@@ -1,88 +1,19 @@
-//Variables
 - let name = "Raul Felipe de Melo";
-- let cellphone = "+353 83 871 3722"
-- let address = "32, North Circular Road, Flat 2, Dublin 7, Ireland"
-- let email = "melo.raulf@gmail.com"
-- let personalWebSite = "rauldemelo.com.br"
 
 html
     head
         title #{name}
-        style
-            include ../node_modules/normalize.css/normalize.css
-            include css/cv.min.css
-            include css/print.min.css
-            include css/mobile.min.css
+        link(href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet")
+        link(href="index.min.css" rel="stylesheet")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
     body
         script
             include analytics/staff.js
-        section.general-infos
-            h1.general-infos--name #{name}
-            p.general-infos--cellphone 
-                a(href=`tel:${cellphone}`) #{cellphone}
-            p.general-infos--address #{address}
-            p.general-infos--email 
-                a(href=`mailto:${email}?Subject=Contact`) #{email}
 
-        section.objectives
-            h2.section-main-title Objective
-            p.objectives--description
-                |An experienced and hard professional looking for an opportunity to work as a bartender, bar back, floor staff or relative areas. Available to work part-time Monday to Friday mornings and nights and Weekends the whole day.
+    include ./includes/staff/infos.pug
+    include ./includes/staff/objective.pug
+    include ./includes/staff/experiences.pug
+    include ./includes/staff/education.pug
+    include ./includes/staff/skills.pug
 
-        section.education
-                h2.section-main-title Education and Languages
-                section.education--college
-                    p
-                        time 2013 - 2017
-                        - let collegeStatus = "In progress";
-                        |- Systems Information - Universidade de Ribeirão Preto (UNAERP) – #{collegeStatus}
-
-        section.jobs
-            h2.section-main-title Work Experience
-            section.jobs--job
-                p.jobs--job--position Bartender
-                div.jobs--job--infos-container
-                    p.jobs--job--company Bartenders RP – Ribeirão Preto - SP, Brazil.
-                    p.jobs--job--duration Jan. 2013 – Dec. 2014
-                p.jobs--job--description
-                    |Prepare alcohol or non-alcohol beverages for bar and restaurant patrons. Interacting with customers, take orders and serve snacks and drinks. Assessing customers' needs and preferences and make recommendations. Full knowledge of mixes, spirits and cocktails.
-
-            section.jobs--job
-                p.jobs--job--position Bartender
-                div.jobs--job--infos-container
-                    p.jobs--job--company Flair Bartenders – Ribeirão Preto - SP, Brazil.
-                    p.jobs--job--duration Jan. 2012 – Dec. 2013
-                p.jobs--job--description
-                    |Mixing ingredients to prepare cocktails, planning and presenting bar menu restocking and replenishing bar inventory and supplies.
-
-            section.jobs--job
-                p.jobs--job--position Waiter
-                div.jobs--job--infos-container
-                    p.jobs--job--company DL Events – Ribeirão Preto - SP, Brazil.
-                    p.jobs--job--duration Mar. 2011 – Dec. 2011
-                p.jobs--job--description
-                    |Greeting customers who arrives, presenting menus and answering questions about it, serving tables in an appropriated and timely manner. 
-
-            section.jobs--job
-                p.jobs--job--position Drink Runner
-                div.jobs--job--infos-container
-                    p.jobs--job--company DL Events – Ribeirão Preto - SP, Brazil.
-                    p.jobs--job--duration Mar. 2011 – Dec. 2011
-                p.jobs--job--description
-                    |Delivering drinks to tables, and taking orders for drinks from customers. 
-
-            section.skills
-                h2.section-main-title Skills and Interests
-                section.education--language
-                    p 
-                        b Languages: 
-                        |Portuguese (Native) and English (Intermediate)
-                    p 
-                        b Personal:  
-                        |Adaptable, organized, quick learner, determined, proactive and responsible.
-                    p
-                        b Computer skills: 
-                        |Microsoft Office and Internet.
-        script
-            include scripts/index.js
+    script(src='index.min.js')
