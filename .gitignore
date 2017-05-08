@@ -1,8 +1,8 @@
 ## directories
 node_modules/
-.vscode/
 dist/
+.vscode/
 .publish/
 
 ## Files
-**/*.min.*
+yarn-error.log
