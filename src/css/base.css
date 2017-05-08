@@ -1,7 +1,8 @@
 body {
     max-width: 80%;
     margin: 0 auto;
-    font-family: 'Lora', serif;
+    font-family: 'Raleway', serif;
+    line-height: 1.4;
 }
 
 p {
@@ -19,12 +20,14 @@ h4,
 h5,
 h6 {
     font-size: 1rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lora', sans-serif;
+    
 }
 
 body>section {
     --margins: 2rem;
     margin-bottom: var(--margins);
+    page-break-before: auto;
 }
 
 @media (max-width: 600px) {
@@ -54,7 +57,7 @@ body>section {
 @media print {
     /*General Styles*/
     @page {
-        margin: 0
+        margin: 1cm 2cm 2cm 1.5cm;
     }
     body {
         max-width: 100%;
