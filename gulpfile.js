@@ -15,7 +15,7 @@ const gulp = require('gulp'),
 
 gulp.task('deploy', sequence('build','ghpages'))
 
-gulp.task('build', sequence('clean',['pug','babel','css']))
+gulp.task('build', callback => sequence('clean',['pug','babel','css'])(callback))
 
 gulp.task('ghpages', () => gulp.src('./dist/**/*').pipe(ghPages()));
 
@@ -34,7 +34,7 @@ gulp.task('css', () => {
 
 gulp.task('babel', () => {
     return gulp
-        .src('src/scripts/**/*.js')
+        .src('src/js/**/*.js')
         .pipe(babel())
         .pipe(jsmin())
         .pipe(rename({suffix: '.min'}))
@@ -66,6 +66,6 @@ gulp.task('sv', () => {
 
     gulp
         .watch('src/**/*.*', ['build'])
-        .on('change', ()=>setTimeout(browser.reload,600));
+        .on('change', browser.reload);
 
 });
