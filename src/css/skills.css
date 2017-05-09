@@ -1,8 +1,21 @@
-/*Education and Languages*/
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.section-main-title{
+    width: 100%;
+}
+
 .skills--skill-list {
     padding: 0;
 }
 
+.skill-group{
+    width: 30%;
+}
+
+/*
 .skills--skill-list li {
     display: inline;
 }
@@ -10,3 +23,4 @@
 .skills--skill-list li:not(:last-child)::after {
     content: ", "
 }
+*/
