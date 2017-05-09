@@ -6,6 +6,10 @@
     text-align: center;
 }
 
+.general-infos>p{
+    margin: .2rem 0;
+}
+
 .general-infos .general-infos--links a {
     display: inline-block;
 }

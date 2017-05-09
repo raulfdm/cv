@@ -15,11 +15,16 @@
     align-items: center;
     font-weight: bold;
 }
-.jobs--job--duration{
+
+.jobs--job--infos-container>p {
+    margin: 0.5rem 0;
+}
+
+.jobs--job--infos-container .jobs--job--duration {
     font-size: 1.1rem;
     margin-left: 2rem;
 }
 
-.others-experiences{
+.others-experiences {
     page-break-inside: avoid
 }
