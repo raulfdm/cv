@@ -1,28 +1,34 @@
-.jobs--job {
+.job {
     --margin: 1rem;
     margin-top: var(--margin);
     margin-bottom: var(--margin);
 }
 
-.jobs .jobs--job--position {
-    font-size: 1.2rem;
-    font-style: italic;
-}
-
-.jobs--job--infos-container {
+.job__infos {
     font-size: 1.4rem;
     display: flex;
     align-items: center;
     font-weight: bold;
 }
 
-.jobs--job--infos-container>p {
+.job__infos>p {
     margin: 0.5rem 0;
 }
+.info__company>.info__where{
+    font-size: 1.1rem;
+}
+.info__company>.info__where::before{
+    content: " ";
+}
 
-.jobs--job--infos-container .jobs--job--duration {
+.job .info__duration {
     font-size: 1.1rem;
     margin-left: 2rem;
+}
+
+.job__position {
+    font-size: 1.2rem;
+    font-style: italic;
 }
 
 .others-experiences {
