@@ -1,5 +1,12 @@
 extends ./template/default.pug
 
+block styles
+    style
+        |p{margin: 0;}
+        |body>section{--margins:0}
+        |.job__infos>p{margin: 0;}
+        |@media print {@page {margin-bottom:.5cm;margin-top:.7cm;}}
+
 block analytics
     script
         include analytics/staff.js
