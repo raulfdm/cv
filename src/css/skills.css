@@ -1,9 +1,10 @@
 .skills {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
-.section-main-title{
+
+.section-main-title {
     width: 100%;
 }
 
@@ -11,9 +12,10 @@
     padding: 0;
 }
 
-.skill-group{
-    width: 30%;
+.skill-group {
+    width: 40%;
 }
+
 
 /*
 .skills--skill-list li {
@@ -24,3 +26,12 @@
     content: ", "
 }
 */
+
+@media (min-width: 601px) {
+    .skills {
+        justify-content: space-between;
+    }
+    .skill-group {
+        width: 30%;
+    }
+}
