@@ -1,6 +1,73 @@
 @import '../../node_modules/normalize.css/normalize.css';
-@import './base';
 @import './general-infos';
 @import './education';
 @import './experiences';
 @import './skills';
+
+p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.754rem;
+}
+
+a {
+    color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1rem;
+    font-family: 'Lora', sans-serif;
+}
+
+body {
+    max-width: 80%;
+    margin: 0 auto;
+    font-family: 'Raleway', serif;
+    line-height: 1.4;
+}
+
+body>section {
+    --margins: 2rem;
+    margin-bottom: var(--margins);
+    page-break-before: auto;
+}
+
+.section-main-title {
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+    border-bottom: 1px solid #cdcdcd;
+}
+
+@media (max-width: 600px) {
+    body {
+        max-width: 95%;
+    }
+    .section-main-title {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 601px) {
+    body {
+        max-width: 90%;
+    }
+}
+
+@media (min-width: 960px) {
+    body {
+        max-width: 80%;
+    }
+}
+
+@media print {
+    @page {
+        margin: 1cm 2cm 2cm 1.5cm;
+    }
+    body {
+        max-width: 100%;
+    }
+}
