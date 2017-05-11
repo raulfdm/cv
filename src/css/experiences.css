@@ -7,6 +7,7 @@
 .job__infos {
     font-size: 1.4rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     font-weight: bold;
 }
@@ -14,10 +15,12 @@
 .job__infos>p {
     margin: 0.5rem 0;
 }
-.info__company>.info__where{
+
+.info__company>.info__where {
     font-size: 1.1rem;
 }
-.info__company>.info__where::before{
+
+.info__company>.info__where::before {
     content: " ";
 }
 
@@ -33,4 +36,10 @@
 
 .others-experiences {
     page-break-inside: auto
+}
+
+@media (min-width: 780px) {
+    .job__infos {
+        justify-content: flex-start;
+    }
 }
