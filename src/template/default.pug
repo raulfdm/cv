@@ -6,11 +6,21 @@
 doctype html
 html(lang='en')
     head
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+        //- SEO
         title #{name}
+        block meta-seo
+        meta(name="author" content=name)
+        meta(name="robots" content="index,nofollow")
+
+        //- Imports CSS
         link(href="https://fonts.googleapis.com/css?family=Dosis|Raleway|Lora" rel="stylesheet")
         link(href="index.min.css" rel="stylesheet")
         block styles
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+        //-- Imports JS
+        block scripts-header
     body
         //
             [if lt IE 9]<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>[endif]
