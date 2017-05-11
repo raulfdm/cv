@@ -26,10 +26,10 @@ $ npm install
 3. After that, you will build the files and bootstrap the server with the following command:
 ```sh
 #if you use Yarn
-$ yarn sv
+$ yarn start
 
 #if you use NPM
-$ npm run-script sv
+$ npm run-script start
 ```
 
 4. If you want deploy your project to [Github Pages](https://pages.github.com/), run the command:
