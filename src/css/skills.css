@@ -1,38 +1,39 @@
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    page-break-inside: avoid;
-}
-
-.section-main-title {
-    width: 100%;
-}
-
-.skills--skill-list {
-    padding: 0;
-}
-
 .skill-group {
-    width: 40%;
+    padding: .2rem 0;
 }
 
+.skill-title {
+    margin: 0;
+}
 
-/*
-.skills--skill-list li {
+.skill-title::after {
+    content: ":"
+}
+.skill-list{
     display: inline;
 }
 
-.skills--skill-list li:not(:last-child)::after {
+.skill-title,
+.skill-list li {
+    display: inline-block;
+}
+
+.skill-list {
+    margin: 0;
+    margin-left: .5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.skill-list li:not(:last-child)::after {
     content: ", "
 }
-*/
 
 @media (min-width: 601px) {
     .skills {
         justify-content: space-between;
     }
     .skill-group {
-        width: 30%;
+        /*width: 30%;*/
     }
 }
