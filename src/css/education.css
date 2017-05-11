@@ -1,3 +1,23 @@
+.education p{
+    margin: .2rem 0;
+}
 .education .education--college p time {
     font-weight: bold;
+}
+
+.extra-courser__title {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.course .course-title,
+.course .course-workload,
+.course-organization {
+    display: inline;
+    margin: 0;
+}
+
+.course .course-workload::before,
+.course-organization::before {
+    content: ' - '
 }
