@@ -42,7 +42,7 @@ body>section {
 .section-main-title {
     width: 100%;
     font-size: 1.8rem;
-    margin-bottom: .5rem;
+    margin: .8rem 0;
     border-bottom: 1px solid #cdcdcd;
 }
 
@@ -63,7 +63,7 @@ body>section {
 
 @media (min-width: 960px) {
     body {
-        width: 80%;
+        width: 70%;
     }
 }
 
@@ -77,5 +77,8 @@ body>section {
     body {
         width: 210mm;
         height: 297mm;
+    }
+    body>section{
+        margin-bottom: 1rem;
     }
 }
