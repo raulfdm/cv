@@ -4,6 +4,7 @@ import generalInfos from '../../globals/data/general-info';
 
 const Infos = styled.section`
   text-align: center;
+  margin: 0.67em 0;
 `;
 
 const Name = styled.h1`
