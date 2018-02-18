@@ -1,8 +1,4 @@
-@import '../../node_modules/normalize.css/normalize.css';
-@import './general-infos';
-@import './education';
-@import './experiences';
-@import './skills';
+@import 'node_modules/modern-normalize/modern-normalize.css';
 p {
     margin-top: 0.5rem;
     margin-bottom: 0.754rem;
