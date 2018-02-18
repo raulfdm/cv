@@ -7,6 +7,10 @@ const ContentTitle = styled.h2`
   font-size: 1.8rem;
   margin: 0.8rem 0;
   border-bottom: 1px solid #cdcdcd;
+
+  @media (max-width: 600px) {
+    font-size: 1.4rem;
+  }
 `;
 
 const TitleWrapper = ({ title }) => {
