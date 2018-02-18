@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import moment from 'moment';
 import styled from 'styled-components';
 import education from '../../globals/data/education';
+import ExtraCourses from '../ExtraCourses';
 import { Section, SectionBody, SectionTitle } from '../Section/';
 
 const ItemContainer = styled.div`
@@ -61,6 +62,7 @@ const EducationWrapper = () => {
             <LanguageItem key={language.id}>{language.label}</LanguageItem>
           ))}
         </ItemContainer>
+        <ExtraCourses />
       </SectionBody>
     </Section>
   );
