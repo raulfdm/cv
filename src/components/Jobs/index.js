@@ -4,12 +4,12 @@ import experiences from '../../globals/data/experiences';
 import { generateTimeRange } from '../../utils/date.utils';
 import { Section, SectionBody, SectionTitle } from '../Section';
 
-const Job = styled.div`
+export const Job = styled.div`
   margin-top: 1rem;
   margin-bottom: 1rem;
 `;
 
-const JobInfos = styled.div`
+export const JobInfos = styled.div`
   font-size: 1.4rem;
   display: flex;
   justify-content: space-between;
@@ -21,11 +21,11 @@ const JobInfos = styled.div`
   }
 `;
 
-const CompanyName = styled.p`
+export const CompanyName = styled.p`
   margin: 0.5rem 0;
 `;
 
-const WorkedTime = styled.p`
+export const WorkedTime = styled.p`
   margin: 0.5rem 0;
   font-size: 0.9rem;
   margin-left: 2rem;
@@ -36,7 +36,7 @@ const JobTitle = styled.p`
   font-style: italic;
 `;
 
-const JobDescription = styled.p`
+export const JobDescription = styled.p`
   page-break-inside: auto;
 `;
 
