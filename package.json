@@ -51,6 +51,9 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
+    "clean": "rimraf build/",
+    "deploy": "surge -p build/ -d https://raulfdmcv.surge.sh",
+    "predeploy": "npm-run-all clean build",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
@@ -96,5 +99,9 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.2",
+    "rimraf": "^2.6.2"
   }
 }
