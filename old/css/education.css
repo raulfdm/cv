@@ -1,13 +1,6 @@
 .education--language .education,.education--language .language{
     padding: .4rem 0;
 }
-.education p{
-    margin: .2rem 0;
-}
-.education .college p time {
-    font-weight: bold;
-    font-size: .9rem;
-}
 
 .extra-course__title {
     font-size: 1.4rem;
@@ -21,9 +14,7 @@
     margin: 0;
 }
 
-.course .course-workload::before {
-    content: ' - '
-}
+
 .course-organization {
     margin-bottom: 0;
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Headers from './components/Headers';
 import Infos from './components/Infos';
 import Career from './components/Career';
+import Education from './components/Education';
 import Skills from './components/Skills';
 
 class App extends Component {
@@ -12,6 +13,7 @@ class App extends Component {
         <Infos />
         <Career />
         <Skills />
+        <Education />
       </div>
     );
   }
