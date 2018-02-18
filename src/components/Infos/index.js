@@ -46,7 +46,7 @@ const InfoWrapper = () => {
       <InfoContainer>
         {generalInfos.map(({ id, label, type, link }) => {
           return (
-            <Info key={id} href={getProperHref(type, link)}>
+            <Info key={id} href={getProperHref(type, link)} target="_blank">
               {label}
             </Info>
           );
