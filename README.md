@@ -1,11 +1,11 @@
 # CV Online
-> :briefcase: Easy to see it, easy to print it. Responsive and printable!
+> :briefcase: Responsive and Printable CV using React!
+
+[Check it on Action here.](https://raulfdmcv.surge.sh/)
 
 ## Stack
-- Task Runner: [Gulp](http://gulpjs.com/)
-- CSS Toll: [PostCSS](https://github.com/postcss/postcss)
-- HTML Template Engine: [PUG (ex Jade)](https://pugjs.org/)
-- Transpiler: [Babel JS](https://babeljs.io/)
+- React (reate-react-app ejected)
+- Styled Component
 
 ## Running
 
@@ -29,10 +29,10 @@ $ npm install
 $ yarn start
 
 #if you use NPM
-$ npm run-script start
+$ npm start
 ```
 
-4. If you want deploy your project to [Github Pages](https://pages.github.com/), run the command:
+4. This project are using [Surge.sh](https://surge.sh/) as host. If you want deploy your own, open your `package.json`, on `deploy:surge` script and set your URL. After this, run:
 ```sh
 #if you use Yarn
 $ yarn deploy
@@ -41,6 +41,6 @@ $ yarn deploy
 $ npm run-script deploy
 ```
 
-## Secret move
+## License
 
-In this case, I create a two CVs, one for development jobs and the other to staff jobs. To change without type an url, you just need to press: `Shift+S+T+F` and you will be redirected to **cv staff**. If you wrong the "combo", you can reset pressing **Backspace** 3 times.
+[MIT](./License)
