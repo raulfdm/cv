@@ -16,7 +16,7 @@ export default [
   },
   {
     id: 7,
-    title: 'Libs',
+    title: 'Libraries',
     skills: ['lodash', 'flow', 'Webpack', 'Redux'],
   },
   {

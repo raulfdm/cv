@@ -24,7 +24,7 @@ const Group = styled.div`
 export default () => {
   return (
     <Section>
-      <SectionTitle title="Tecnical SKills" />
+      <SectionTitle title="Tecnical Skills" />
       <SectionBody>
         {skillSet.map(skill => {
           return (
