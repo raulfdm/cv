@@ -1,4 +1,8 @@
+import { injectGlobal } from 'styled-components';
+
+injectGlobal`
 @import 'node_modules/modern-normalize/modern-normalize.css';
+@import url('https://fonts.googleapis.com/css?family=Lora|Raleway');
 p {
     margin-top: 0.5rem;
     margin-bottom: 0.754rem;
@@ -29,26 +33,11 @@ body {
     line-height: 1.4;
 }
 
-body>section {
-    --margins: 2rem;
-    margin-bottom: var(--margins);
-    page-break-before: auto;
-}
-
-.section-main-title {
-    width: 100%;
-    font-size: 1.8rem;
-    margin: .8rem 0;
-    border-bottom: 1px solid #cdcdcd;
-}
-
 @media (max-width: 600px) {
     body {
         width: 95%;
     }
-    .section-main-title {
-        font-size: 1.4rem;
-    }
+
 }
 
 @media (min-width: 601px) {
@@ -78,3 +67,7 @@ body>section {
         margin-bottom: 1rem;
     }
 }
+
+
+
+`;
