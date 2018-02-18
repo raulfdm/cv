@@ -6,6 +6,6 @@ const Section = styled.section`
   page-break-before: auto;
 `;
 
-export default ({ childre }) => {
-  return <Section>{childre}</Section>;
+export default ({ children }) => {
+  return <Section>{children}</Section>;
 };
