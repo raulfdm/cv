@@ -47,7 +47,7 @@ export default () => {
       <SectionBody>
         {experiences.jobs.map(job => {
           return (
-            <Job>
+            <Job key={job.id}>
               <JobInfos>
                 <CompanyName>{job.companyName}</CompanyName>
                 <WorkedTime>{generateTimeRange(job.timeInit, job.timeEnd)}</WorkedTime>

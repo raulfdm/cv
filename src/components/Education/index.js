@@ -28,7 +28,7 @@ const EducationWrapper = () => {
         <ItemContainer>
           {education.it.map(({ id, timeInit, timeEnd, course, place }) => {
             return (
-              <GraduationItem>
+              <GraduationItem key={id}>
                 {generateTimeRange(timeInit, timeEnd)} - {generateCourse(course, place)}
               </GraduationItem>
             );
