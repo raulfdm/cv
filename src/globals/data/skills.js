@@ -20,7 +20,7 @@ export default [
     skills: ['lodash', 'flow', 'Webpack', 'Redux'],
   },
   {
-    id: 3,
+    id: 8,
     title: 'Languages',
     skills: ['CSS', 'HTML', 'Go', 'JavaScript (ES6^)', 'Regex'],
   },
