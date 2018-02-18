@@ -1,31 +1,16 @@
 {
   "name": "cv",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": {},
-  "license": "MIT",
-  "scripts": {
-    "start": "gulp build && gulp sv",
-    "deploy": "gulp deploy"
-  },
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "normalize.css": "^5.0.0"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1"
   },
-  "devDependencies": {
-    "autoprefixer": "^7.0.1",
-    "babel-preset-env": "^1.2.0",
-    "browser-sync": "^2.18.8",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-clean": "^0.3.2",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-gh-pages": "^0.5.4",
-    "gulp-jsmin": "^0.1.5",
-    "gulp-postcss": "^7.0.0",
-    "gulp-pug": "^3.2.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sequence": "^0.4.6",
-    "gulp-sourcemaps": "^2.6.0",
-    "postcss-import": "^9.1.0"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
