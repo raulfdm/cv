@@ -1,42 +1,81 @@
 export default [
   {
+    id: 2,
+    title: 'Task Runners',
+    skills: ['NPM Scripts', 'Gulp'],
+  },
+  {
+    id: 3,
+    title: 'Languages',
+    skills: ['CSS', 'HTML', 'JavaScript (ES6^)', 'GraphQL', 'TypeScript', 'Regex'],
+  },
+  {
+    id: 10,
+    title: 'Usefull Libraries',
+    skills: ['momentJS', 'Underscore', 'ImmutableJS', 'Styled-Component'],
+  },
+  {
+    id: 4,
+    title: 'Testing',
+    skills: ['Jasmine', 'Jest', 'Mocha', 'Enzyme'],
+  },
+  {
+    id: 9,
+    title: 'Pre-processor',
+    skills: ['PostCSS', 'SASS'],
+  },
+
+  {
+    id: 5,
+    title: 'Module Loader/Bundler',
+    skills: ['Browserify', 'Webpack'],
+  },
+  {
+    id: 6,
+    title: 'Frameworks',
+    skills: ['ExpressJS', 'React'],
+  },
+  {
+    id: 13,
+    title: 'DevOPs',
+    skills: ['CI/CD', 'Travis'],
+  },
+  {
+    id: 7,
+    title: 'Database',
+    skills: ['MongoDB', 'SQL Oracle', 'Firebase Database'],
+  },
+  {
     id: 1,
     title: 'Back-end Technologies',
     skills: ['NodeJS', 'Golang'],
   },
+
   {
-    id: 2,
-    title: 'Database',
-    skills: ['MongoDB', 'SQL Oracle'],
-  },
-  {
-    id: 3,
-    title: 'Frameworks',
-    skills: ['ExpressJS', 'React (enviroment)'],
-  },
-  {
-    id: 7,
-    title: 'Libraries',
-    skills: ['lodash', 'flow', 'Webpack', 'Redux'],
-  },
-  {
-    id: 8,
-    title: 'Languages',
-    skills: ['CSS', 'HTML', 'Go', 'JavaScript (ES6^)', 'Regex'],
-  },
-  {
-    id: 4,
-    title: 'Patterns and Principles',
-    skills: ['MVC', 'Object Oriented (OOP)', 'RESTful'],
-  },
-  {
-    id: 5,
+    id: 11,
     title: 'Operation System',
     skills: ['MacOS', 'Linux', 'Windows'],
   },
   {
     id: 6,
     title: 'Tools',
-    skills: ['Git', 'Photoshop'],
+    skills: ['Git', 'Photoshop', 'NPM/Yarn', 'Terminal'],
+  },
+  {
+    id: 8,
+    title: 'Methodologies',
+    skills: [
+      'Atomic Design',
+      'BEM',
+      'SMACSS',
+      'Functional Programing',
+      'JS Design Patterns',
+      'Regex',
+      'Responsive Web',
+      'PWA',
+      'MVC',
+      'RestFULL',
+      'Oriented Object Programing (OOP)',
+    ],
   },
 ];

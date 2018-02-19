@@ -1,6 +1,27 @@
 export default [
   {
     id: 1,
+    foundation: 'Udemy (Mooc Platform)',
+    courses: [
+      {
+        id: 1,
+        name: 'React Ninja: Complete React Course',
+        hours: 51.7,
+      },
+      {
+        id: 2,
+        name: 'TDD with JS',
+        hours: 14,
+      },
+      {
+        id: 3,
+        name: 'Git and Github in a real life',
+        hours: 4,
+      },
+    ],
+  },
+  {
+    id: 1,
     foundation: 'Alura Online Courses (Mooc Platform)',
     courses: [
       {
