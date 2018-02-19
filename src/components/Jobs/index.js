@@ -40,6 +40,14 @@ export const JobDescription = styled.p`
   page-break-inside: auto;
 `;
 
+const generateJobDescription = jobDescription => {
+  return typeof jobDescription !== 'string' ? (
+    jobDescription.map((text, index) => <JobDescription key={index}>{text}</JobDescription>)
+  ) : (
+    <JobDescription>{jobDescription}</JobDescription>
+  );
+};
+
 export default () => {
   return (
     <Section>
@@ -53,7 +61,7 @@ export default () => {
                 <WorkedTime>{generateTimeRange(job.timeInit, job.timeEnd)}</WorkedTime>
               </JobInfos>
               <JobTitle>{job.jobTitle}</JobTitle>
-              <JobDescription>{job.jobDescription}</JobDescription>
+              {generateJobDescription(job.jobDescription)}
             </Job>
           );
         })}
