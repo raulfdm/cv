@@ -38,6 +38,7 @@ const JobTitle = styled.p`
 
 export const JobDescription = styled.p`
   page-break-inside: auto;
+  margin: 0.3rem 0;
 `;
 
 const generateJobDescription = jobDescription => {
