@@ -11,13 +11,13 @@ export default [
   },
   {
     id: 10,
-    title: 'Usefull Libraries',
+    title: 'Useful Libraries',
     skills: ['momentJS', 'Underscore', 'ImmutableJS', 'Styled-Component'],
   },
   {
     id: 4,
     title: 'Testing',
-    skills: ['Jasmine', 'Jest', 'Mocha', 'Enzyme'],
+    skills: ['Jasmine', 'Jest', 'Mocha', 'Enzyme', 'Cypress'],
   },
   {
     id: 9,
