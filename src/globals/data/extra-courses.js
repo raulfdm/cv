@@ -26,12 +26,12 @@ export default [
     courses: [
       {
         id: 1,
-        name: 'Regular Expressions: Catching texts magiclly',
+        name: 'Regular Expressions: Catching texts magically',
         hours: 12,
       },
       {
         id: 2,
-        name: 'NodeJS: Writting a RESTful API',
+        name: 'NodeJS: Writing a RESTful API',
         hours: 16,
       },
       {
@@ -41,7 +41,7 @@ export default [
       },
       {
         id: 4,
-        name: 'React: Reusable Components For Your Webapp',
+        name: 'React: Reusable Components For Your WebApp',
         hours: 10,
       },
       {

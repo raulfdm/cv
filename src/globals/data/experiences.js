@@ -11,7 +11,7 @@ export default {
         `YoungCapital is a great dutch company founded in 2000 by Hugo de Koning, Bram Bosveld and Rogie Thewessen. It main goal if offer the best recruit service for both companies which want to find new talents and employee who want to find a awesome company to work.`,
         `There, I perform in:`,
         `- Implement new projects using the whole React Environment;`,
-        `- Creator and core commitor to the React Component Library using the style guide;`,
+        `- Creator and core committer to the React Component Library using the style guide;`,
         `- Maintenance the already existing projects;`,
         `- Support the webmaster Team with implementation Problems;`,
         `- Do analysis through new technologies to check the newest and best solutions and strategy and implementation or refactor projects.`,
