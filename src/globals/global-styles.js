@@ -1,7 +1,7 @@
 import { injectGlobal } from 'styled-components';
+import 'modern-normalize/modern-normalize.css';
 
 injectGlobal`
-@import 'node_modules/modern-normalize/modern-normalize.css';
 @import url('https://fonts.googleapis.com/css?family=Lora|Raleway');
 p {
     margin-top: 0.5rem;
@@ -70,7 +70,7 @@ body {
 
 @media print {
   @page { margin: 0; }
-  body { margin: 1.6cm; }
+  body { padding: 1.6cm; }
 }
 
 `;
