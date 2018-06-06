@@ -17,6 +17,7 @@ const Name = styled.h1`
 const Info = styled.a`
   margin: 0.1rem 0;
   display: inline-block;
+  align-self: center;
   @media print {
     color: black;
     font-style: none;
@@ -25,7 +26,7 @@ const Info = styled.a`
 `;
 
 const InfoContainer = styled.div`
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
 `;
 
