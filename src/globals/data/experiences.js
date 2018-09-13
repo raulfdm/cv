@@ -43,7 +43,7 @@ export default {
       timeEnd: moment('01/12/2016', 'DD/MM/YYYY'),
       jobTitle: 'Technical Support Analyst - Tier 2',
       jobDescription: [
-        `Sythex Technology in Systems is a branch of Sênior System Group company which develop a well known application (in Brazil) for the whole management of different kind of warehouse (Warehouse Management System).`,
+        `Sythex Technology in Systems is a branch of Sênior System Group company which develops a well known application (in Brazil) for the whole management of different kind of warehouse (Warehouse Management System).`,
         `There, I was responsible for:`,
         `- Customer service, answering questions about business rules and systems logic;`,
         `- Reading and debugging PL/SQL and Java routines;`,
