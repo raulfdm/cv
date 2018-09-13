@@ -7,8 +7,8 @@ export default [
   },
   {
     id: 2,
-    label: 'Johan Hofmanstraat 90, Amsterdam',
-    link: 'https://maps.google.com/?q=Johan Hofmanstraat 90, Amsterdam',
+    label: 'Koolgracht, Leiden',
+    link: 'https://goo.gl/maps/C29PR8udifG2',
     type: 'regular',
   },
   {
