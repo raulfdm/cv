@@ -2,7 +2,7 @@ import { injectGlobal } from 'styled-components';
 import 'modern-normalize/modern-normalize.css';
 
 injectGlobal`
-@import url('https://fonts.googleapis.com/css?family=Lora|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Lora|Raleway:400,700');
 p {
     margin-top: 0.5rem;
     margin-bottom: 0.754rem;
