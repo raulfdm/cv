@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import styled, { css, injectGlobal } from 'styled-components';
 import { push } from 'gatsby-link';
+import { Formik } from 'formik';
+import * as Yup from 'yup';
 
-import GoogleButton from '../components/GoogleButtonLogin';
-import { LoginWithGoogle, getToken } from '../helpers/auth';
+import LoginForm from '../components/LoginForm';
+import { loginPassword, getToken } from '../helpers/auth';
 
 const global = css`
   html {
@@ -25,7 +27,7 @@ const LoginPage = styled.main`
 const LoginBox = styled.div`
   padding: 1rem;
   width: 100%;
-  max-width: 300px;
+  max-width: 350px;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 2px 1px -1px rgba(0, 0, 0, 0.12);
   display: flex;
@@ -39,11 +41,13 @@ const Title = styled.h1`
 `;
 
 export default class Login extends Component {
-  login = () => {
-    LoginWithGoogle()
+  login = ({ email, password }, { setSubmitting, setErrors }) => {
+    loginPassword(email, password)
       .then(this.redirectToEdit)
+      .then(() => setSubmitting(true))
       .catch(err => {
-        console.log('eita porra', err);
+        setErrors({ serverError: err.message });
+        setSubmitting(false);
       });
   };
 
@@ -59,7 +63,30 @@ export default class Login extends Component {
       <LoginPage>
         <LoginBox>
           <Title>Edit CV Login</Title>
-          <GoogleButton onClick={this.login} />
+          <Formik
+            values={{
+              email: '',
+              password: '',
+            }}
+            validationSchema={Yup.object().shape({
+              email: Yup.string()
+                .email()
+                .required('Email is required'),
+              password: Yup.string().required('Password is required'),
+            })}
+            onSubmit={this.login}
+          >
+            {({ errors, isSubmitting, handleChange, handleSubmit }) => {
+              return (
+                <LoginForm
+                  errors={errors}
+                  handleChange={handleChange}
+                  handleSubmit={handleSubmit}
+                  isSubmitting={isSubmitting}
+                />
+              );
+            }}
+          </Formik>
         </LoginBox>
       </LoginPage>
     );
