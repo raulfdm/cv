@@ -14,6 +14,7 @@
     "format": "prettier --write 'src/**/*.js'"
   },
   "dependencies": {
+    "firebase": "^5.5.0",
     "gatsby": "^1.9.277",
     "gatsby-link": "^1.6.46",
     "gatsby-plugin-google-analytics": "^1.0.31",
@@ -29,8 +30,8 @@
   },
   "devDependencies": {
     "prettier": "^1.13.7",
-    "surge": "^0.20.1",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "surge": "^0.20.1"
   },
   "repository": {
     "type": "git",
