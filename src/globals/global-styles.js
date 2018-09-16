@@ -26,28 +26,8 @@ const global = css`
   }
 
   body {
-    max-width: 70rem;
-    margin: 0 auto;
     font-family: 'Raleway', serif;
     line-height: 1.4;
-  }
-
-  @media (max-width: 600px) {
-    body {
-      width: 95%;
-    }
-  }
-
-  @media (min-width: 601px) {
-    body {
-      width: 90%;
-    }
-  }
-
-  @media (min-width: 960px) {
-    body {
-      width: 70%;
-    }
   }
 
   @page {
