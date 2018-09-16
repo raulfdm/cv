@@ -1,4 +1,4 @@
-import { firebaseAuth, googleAuthProvider } from '../globals/firebase';
+import { firebaseAuth } from '../globals/firebase';
 
 const firebaseLocalStorage = 'firebaseToken';
 
@@ -8,15 +8,11 @@ export const removeToken = () => localStorage.removeItem(firebaseLocalStorage);
 
 export const getToken = () => localStorage.getItem(firebaseLocalStorage);
 
-export const LoginWithGoogle = () => {
+export const loginPassword = (email, password) => {
   return firebaseAuth()
-    .signInWithPopup(googleAuthProvider)
-    .then(({ credential: { accessToken } }) => {
-      saveToken(accessToken);
-      return accessToken;
-    })
-    .catch(err => {
-      removeToken();
-      return err;
+    .signInWithEmailAndPassword(email, password)
+    .then(({ user: { m: token } }) => {
+      saveToken(token);
+      return token;
     });
 };

@@ -11,9 +11,9 @@ const config = {
 
 firebase.initializeApp(config);
 
-export const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 export const cvDatabase = firebase
   .database()
   .ref()
   .child('cv');
+
 export const firebaseAuth = firebase.auth;
