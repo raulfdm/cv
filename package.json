@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "firebase": "^5.5.0",
+    "formik": "^1.3.0",
     "gatsby": "^1.9.277",
     "gatsby-link": "^1.6.46",
     "gatsby-plugin-google-analytics": "^1.0.31",
@@ -26,7 +27,8 @@
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
-    "styled-components": "^3.4.6"
+    "styled-components": "^3.4.6",
+    "yup": "^0.26.5"
   },
   "devDependencies": {
     "prettier": "^1.13.7",
