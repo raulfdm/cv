@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import HelperText from '../HelperText';
+
 const FieldContainer = styled.div`
   width: 100%;
   display: flex;
@@ -8,13 +10,6 @@ const FieldContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-`;
-
-const HelperText = styled.p`
-  margin: 0;
-  flex-basis: 100%;
-  font-size: 10px;
-  color: tomato;
 `;
 
 const Input = styled.input`
@@ -31,13 +26,22 @@ const Field = ({
   name,
   onChange,
   error,
+  disabled,
+  value,
 }) => {
   return (
     <FieldContainer className={className}>
       <label className={labelClassName} htmlFor={name}>
         {label}
       </label>
-      <Input type={type} onChange={onChange} name={name} className={inputClassName} />
+      <Input
+        type={type}
+        onChange={onChange}
+        name={name}
+        className={inputClassName}
+        disabled={disabled}
+        value={value}
+      />
       {error && <HelperText>{error}</HelperText>}
     </FieldContainer>
   );
