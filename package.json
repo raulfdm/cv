@@ -1,6 +1,6 @@
 {
   "name": "cv",
-  "description": "Gatsby default starter",
+  "description": "Online static CV using React with GatsbyJS",
   "version": "0.3.0",
   "homepage": "https://raulfdmcv.surge.sh",
   "author": "Raul Melo <melo.raulf@gmail.com>",
