@@ -2,6 +2,16 @@ import { injectGlobal, css } from 'styled-components';
 import 'modern-normalize/modern-normalize.css';
 
 const global = css`
+  body,
+  #___gatsby {
+    height: 100%;
+  }
+
+  body {
+    font-family: 'Raleway', serif;
+    line-height: 1.4;
+  }
+
   p {
     margin-top: 0.5rem;
     margin-bottom: 0.754rem;
@@ -23,11 +33,6 @@ const global = css`
 
   ul {
     padding-left: 1.5rem;
-  }
-
-  body {
-    font-family: 'Raleway', serif;
-    line-height: 1.4;
   }
 
   @page {
