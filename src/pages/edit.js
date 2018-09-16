@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { push } from 'gatsby-link';
 
-import { removeToken, getToken } from '../helpers/auth';
+import { signOut, getToken } from '../helpers/auth';
 
 export default class EditPage extends Component {
   componentWillMount = () => {
@@ -10,10 +10,7 @@ export default class EditPage extends Component {
     }
   };
 
-  logout = () => {
-    removeToken();
-    push('/login');
-  };
+  logout = () => signOut().then(() => push('/login'));
 
   render() {
     return (

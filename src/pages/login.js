@@ -5,7 +5,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 
 import LoginForm from '../components/LoginForm';
-import { loginPassword, getToken } from '../helpers/auth';
+import { signIn, getToken } from '../helpers/auth';
 
 const global = css`
   html {
@@ -42,7 +42,7 @@ const Title = styled.h1`
 
 export default class Login extends Component {
   login = ({ email, password }, { setSubmitting, setErrors }) => {
-    loginPassword(email, password)
+    signIn(email, password)
       .then(this.redirectToEdit)
       .then(() => setSubmitting(true))
       .catch(err => {
