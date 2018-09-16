@@ -1,108 +1,38 @@
 {
   "name": "cv",
-  "version": "0.2.0",
-  "private": true,
+  "description": "Gatsby default starter",
+  "version": "0.3.0",
   "homepage": "https://raulfdmcv.surge.sh",
-  "dependencies": {
-    "autoprefixer": "7.1.6",
-    "babel-core": "6.26.0",
-    "babel-eslint": "7.2.3",
-    "babel-jest": "20.0.3",
-    "babel-loader": "7.1.2",
-    "babel-preset-react-app": "^3.1.1",
-    "babel-runtime": "6.26.0",
-    "case-sensitive-paths-webpack-plugin": "2.1.1",
-    "chalk": "1.1.3",
-    "css-loader": "0.28.7",
-    "dotenv": "4.0.0",
-    "dotenv-expand": "4.2.0",
-    "eslint": "4.10.0",
-    "eslint-config-react-app": "^2.1.0",
-    "eslint-loader": "1.9.0",
-    "eslint-plugin-flowtype": "2.39.1",
-    "eslint-plugin-import": "2.8.0",
-    "eslint-plugin-jsx-a11y": "5.1.1",
-    "eslint-plugin-react": "7.4.0",
-    "extract-text-webpack-plugin": "3.0.2",
-    "file-loader": "1.1.5",
-    "fs-extra": "3.0.1",
-    "html-webpack-plugin": "2.29.0",
-    "jest": "20.0.4",
-    "linkifyjs": "^2.1.5",
-    "modern-normalize": "^0.4.0",
-    "moment": "^2.20.1",
-    "object-assign": "4.1.1",
-    "postcss-flexbugs-fixes": "3.2.0",
-    "postcss-import": "^11.1.0",
-    "postcss-loader": "2.0.8",
-    "promise": "8.0.1",
-    "raf": "3.4.0",
-    "react": "^16.2.0",
-    "react-dev-utils": "^5.0.0",
-    "react-dom": "^16.2.0",
-    "react-helmet": "^5.2.0",
-    "style-loader": "0.19.0",
-    "styled-components": "^3.1.6",
-    "sw-precache-webpack-plugin": "0.11.4",
-    "url-loader": "0.6.2",
-    "webpack": "3.8.1",
-    "webpack-dev-server": "2.9.4",
-    "webpack-manifest-plugin": "1.3.2",
-    "whatwg-fetch": "2.0.3"
-  },
+  "author": "Raul Melo <melo.raulf@gmail.com>",
+  "license": "MIT",
   "scripts": {
-    "clean": "rimraf build/",
-    "deploy": "surge -p build/ -d https://raulfdmcv.surge.sh",
-    "predeploy": "npm-run-all clean build",
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "prebuild": "rimraf public",
+    "build": "gatsby build",
+    "predeploy": "npm run build",
+    "deploy": "surge -p public/ -d https://raulfdmcv.surge.sh",
+    "start": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'"
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,mjs}"
-    ],
-    "setupFiles": [
-      "<rootDir>/config/polyfills.js"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
-      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
-    ],
-    "testEnvironment": "node",
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
-    ],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "mjs",
-      "js",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node"
-    ]
-  },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+  "dependencies": {
+    "gatsby": "^1.9.277",
+    "gatsby-link": "^1.6.46",
+    "gatsby-plugin-google-analytics": "^1.0.31",
+    "gatsby-plugin-google-fonts": "^0.0.4",
+    "gatsby-plugin-react-helmet": "^2.0.11",
+    "linkifyjs": "^2.1.7",
+    "modern-normalize": "^0.5.0",
+    "moment": "^2.22.2",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-helmet": "^5.2.0",
+    "rimraf": "^2.6.2",
+    "styled-components": "^3.4.6"
   },
   "devDependencies": {
-    "google-fonts-webpack-plugin": "^0.4.4",
-    "npm-run-all": "^4.1.2",
-    "rimraf": "^2.6.2"
+    "prettier": "^1.13.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   }
 }

@@ -1,76 +1,81 @@
-import { injectGlobal } from 'styled-components';
+import { injectGlobal, css } from 'styled-components';
 import 'modern-normalize/modern-normalize.css';
 
-injectGlobal`
-@import url('https://fonts.googleapis.com/css?family=Lora|Raleway:400,700');
-p {
+const global = css`
+  p {
     margin-top: 0.5rem;
     margin-bottom: 0.754rem;
-}
+  }
 
-a {
+  a {
     color: black;
-}
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: 1rem;
     font-family: 'Lora', sans-serif;
-}
+  }
 
-ul {
+  ul {
     padding-left: 1.5rem;
-}
+  }
 
-body {
+  body {
     max-width: 70rem;
     margin: 0 auto;
     font-family: 'Raleway', serif;
     line-height: 1.4;
-}
+  }
 
-@media (max-width: 600px) {
+  @media (max-width: 600px) {
     body {
-        width: 95%;
+      width: 95%;
     }
+  }
 
-}
-
-@media (min-width: 601px) {
+  @media (min-width: 601px) {
     body {
-        width: 90%;
+      width: 90%;
     }
-}
+  }
 
-@media (min-width: 960px) {
+  @media (min-width: 960px) {
     body {
-        width: 70%;
+      width: 70%;
     }
-}
+  }
 
-@page {
+  @page {
     size: A4;
     margin: 11mm 17mm 17mm 17mm;
-}
+  }
 
-@media print {
+  @media print {
     html,
     body {
-        width: 210mm;
-        height: 297mm;
+      width: 210mm;
+      height: 297mm;
     }
-    body>section{
-        margin-bottom: 1rem;
+    body > section {
+      margin-bottom: 1rem;
     }
-}
+  }
 
-@media print {
-  @page { margin: 0; }
-  body { padding: 1.6cm; }
-}
+  @media print {
+    @page {
+      margin: 0;
+    }
+    body {
+      padding: 1.6cm;
+    }
+  }
+`;
 
+injectGlobal`
+${global}
 `;
