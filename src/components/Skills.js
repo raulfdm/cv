@@ -1,7 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Section, SectionBody, SectionTitle } from '../Section';
-import skillSet from '../../globals/data/skills';
+
+import Section from './Section';
+import SectionBody from './SectionBody';
+import SectionTitle from './SectionTitle';
+
+import skillSet from '../globals/data/skills';
 
 const Title = styled.h3`
   margin: 0;
