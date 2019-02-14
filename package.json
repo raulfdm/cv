@@ -2,14 +2,16 @@
   "name": "cv",
   "description": "Online static CV using React with GatsbyJS",
   "version": "0.3.0",
-  "homepage": "https://raulfdmcv.surge.sh",
+  "homepage": "https://raulmelo-cv.netlify.com",
   "author": "Raul Melo <melo.raulf@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raulfdm/cv"
+  },
   "scripts": {
     "prebuild": "rimraf public",
     "build": "gatsby build",
-    "predeploy": "npm run build",
-    "deploy": "surge -p public/ -d https://raulfdmcv.surge.sh",
     "start": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'"
   },
@@ -31,11 +33,6 @@
   },
   "devDependencies": {
     "prettier": "^1.16.4",
-    "rimraf": "^2.6.3",
-    "surge": "^0.20.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "rimraf": "^2.6.3"
   }
 }
