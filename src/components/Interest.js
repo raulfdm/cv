@@ -5,20 +5,18 @@ import Section from './Section';
 import SectionBody from './SectionBody';
 import SectionTitle from './SectionTitle';
 
-import interests from '../globals/data/interest';
-
 const InterestItem = styled.p`
   ::before {
     content: '• ';
   }
 `;
 
-export default () => {
+export default ({ data }) => {
   return (
     <Section>
       <SectionTitle title="Interest" />
       <SectionBody>
-        {interests.map((interest, index) => (
+        {data.map((interest, index) => (
           <InterestItem key={interest + index}>{interest}</InterestItem>
         ))}
       </SectionBody>

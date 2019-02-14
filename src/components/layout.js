@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { GlobalStyle } from '../globals/global-styles';
 
 const Layout = ({ children }) => (
-  <React.Fragment>
+  <div>
     <GlobalStyle />
     {children}
-  </React.Fragment>
+  </div>
 );
 
 Layout.propTypes = {
