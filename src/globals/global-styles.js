@@ -1,7 +1,7 @@
-import { injectGlobal, css } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 import 'modern-normalize/modern-normalize.css';
 
-const global = css`
+export const GlobalStyle = createGlobalStyle`
   p {
     margin-top: 0.5rem;
     margin-bottom: 0.754rem;
@@ -54,8 +54,4 @@ const global = css`
       padding: 1.6cm;
     }
   }
-`;
-
-injectGlobal`
-${global}
 `;

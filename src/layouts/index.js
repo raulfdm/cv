@@ -1,8 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../globals/global-styles';
+import { GlobalStyle } from '../globals/global-styles';
 
-const Layout = ({ children }) => <React.Fragment>{children()}</React.Fragment>;
+const Layout = ({ children }) => (
+  <React.Fragment>
+    <GlobalStyle />
+    {children()}
+  </React.Fragment>
+);
 
 Layout.propTypes = {
   children: PropTypes.func,
