@@ -5,7 +5,7 @@ import { GlobalStyle } from '../globals/global-styles';
 const Layout = ({ children }) => (
   <React.Fragment>
     <GlobalStyle />
-    {children()}
+    {children}
   </React.Fragment>
 );
 
@@ -14,13 +14,3 @@ Layout.propTypes = {
 };
 
 export default Layout;
-
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Layout from '../components/layout';
 import Headers from '../components/Headers';
 import Infos from '../components/Infos';
 import Career from '../components/Career';
@@ -27,16 +28,18 @@ const CV = styled.main`
 `;
 
 const IndexPage = () => (
-  <CV>
-    <Headers />
-    <Infos />
-    <Career />
-    <Skills />
-    <Jobs />
-    <Projects />
-    <Education />
-    <Interest />
-  </CV>
+  <Layout>
+    <CV>
+      <Headers />
+      <Infos />
+      <Career />
+      <Skills />
+      <Jobs />
+      <Projects />
+      <Education />
+      <Interest />
+    </CV>
+  </Layout>
 );
 
 export default IndexPage;
