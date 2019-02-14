@@ -1,9 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import ExtraCourses from './ExtraCourses';
+import Section from './Section';
+import SectionBody from './SectionBody';
+import SectionTitle from './SectionTitle';
+
 import { generateTimeRange } from '../utils/date.utils';
 import education from '../globals/data/education';
-import { Section, SectionBody, SectionTitle } from './Section';
 
 const ItemContainer = styled.div`
   padding: 0.4rem 0;

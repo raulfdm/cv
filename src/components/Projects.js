@@ -2,8 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import Linkify from 'linkifyjs/react';
 
+import Section from './Section';
+import SectionBody from './SectionBody';
+import SectionTitle from './SectionTitle';
+
 import { generateTimeRange } from '../utils/date.utils';
-import { Section, SectionBody, SectionTitle } from './Section';
+
 import {
   CompanyName as ProjectName,
   Job as ProjectContainer,

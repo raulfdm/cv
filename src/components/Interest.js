@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Section, SectionBody, SectionTitle } from './Section';
+
+import Section from './Section';
+import SectionBody from './SectionBody';
+import SectionTitle from './SectionTitle';
+
 import interests from '../globals/data/interest';
 
 const InterestItem = styled.p`

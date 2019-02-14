@@ -1,8 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+
+import Section from './Section';
+import SectionBody from './SectionBody';
+import SectionTitle from './SectionTitle';
+
 import experiences from '../globals/data/experiences';
 import { generateTimeRange } from '../utils/date.utils';
-import { Section, SectionBody, SectionTitle } from './Section';
 
 export const Job = styled.div`
   margin-top: 1rem;
