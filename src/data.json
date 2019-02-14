@@ -1,0 +1,298 @@
+{
+  "careerSummary": [
+    "JavaScript developer focused on client-side and user interfaces with over 3 years of experience. Skilled and versatile in creating websites or web applications using regular (HTML/CSS/JS) or advanced technologies as React. Always driven to performance, code quality, tests and good practices.",
+    "Responsible for the whole building process from configuring the general structure up to the deployment process. Focused on writing progressive web apps that are backward compatible, modern, maintainable with readable code and good performance. Also experienced in using NodeJS as platform to create CLI and scripts."
+  ],
+  "education": {
+    "it": [
+      {
+        "id": 1,
+        "timeInit": "2017-05-01",
+        "timeEnd": "2017-11-01",
+        "course": "Full Stack Web Development Certification, Computer Software Engineering",
+        "place": "FreeCodeCamp"
+      },
+      {
+        "id": 2,
+        "timeInit": "2013-08-01",
+        "timeEnd": "2017-08-01",
+        "course": "Systems Information",
+        "place": "University of Ribeirão Preto (UNAERP)"
+      }
+    ],
+    "language": [
+      {
+        "id": 3,
+        "label": "Portuguese - Native"
+      },
+      {
+        "id": 4,
+        "label": "English - Fluent"
+      }
+    ]
+  },
+  "experiences": {
+    "jobs": [
+      {
+        "id": 2,
+        "companyName": "YoungCapital",
+        "timeInit": "2017/11/01",
+        "timeEnd": "",
+        "jobTitle": "JavaScript Developer",
+        "jobDescription": [
+          "YoungCapital is a Dutch company founded in 2000 by Hugo de Koning, Bram Bosveld and Rogier Thewessen. Its main goal is to offer the best recruiting service with focus on online job search.",
+          "There, I am currently responsible for:",
+          "- Implementing new projects using the whole React Environment;",
+          "- Creating and maintaining our internal React Component Library using our internal style guide;",
+          "- Maintaining the already existing projects;",
+          "- Supporting junior developers with features and bugs;",
+          "- Analysing new technologies to verify the newest and best solutions to further create strategies for implementation or refactor of several projects."
+        ]
+      },
+      {
+        "id": 2,
+        "companyName": "Freelancer",
+        "timeInit": "2016/01/01",
+        "timeEnd": "2018/04/01",
+        "jobTitle": "FullStack (JS) Developer",
+        "jobDescription": [
+          "As a Freelancer, I got most of my projects through recommendations within my network.",
+          "My tasks usually encompass:",
+          "- Implementing features required by the clients;",
+          "- Implementing Rest (Representational State Transfer) API using Node + Express (sometimes GraphQL);",
+          "- Creating SPA's (Single Page Applications) using React (and when necessary Redux);",
+          "- Developing websites using vanilla JS and the core web functionalities (HTML, CSS);",
+          "- Architecting the whole development and deployment process;",
+          "- Fixing production bugs;",
+          "- Converting PSD/Sketch/Zeplin layouts into web pages;",
+          "Always providing a high quality source code, well organized, tested and documented."
+        ]
+      },
+      {
+        "id": 1,
+        "companyName": "Sythex Technology in Systems",
+        "timeInit": "2014/08/01",
+        "timeEnd": "2016/12/01",
+        "jobTitle": "Technical Support Analyst - Tier 2",
+        "jobDescription": [
+          "Sythex Technology in Systems is a branch of Sênior System Group company which develops a well known application (in Brazil) for the whole management of different kind of warehouse (Warehouse Management System).",
+          "There, I was responsible for:",
+          "- Customer service, answering questions about business rules and systems logic;",
+          "- Reading and debugging PL/SQL and Java routines;",
+          "- Reporting bugs internally throughout tickets;",
+          "- Analysing and implementing projects and business internal process;",
+          "- Reviewing and writing internal process (new or old workflow)"
+        ]
+      }
+    ],
+    "projects": []
+  },
+  "extraCourses": [
+    {
+      "id": 1,
+      "foundation": "Udemy (Mooc Platform)",
+      "courses": [
+        {
+          "id": 1,
+          "name": "React Ninja: Complete React Course",
+          "hours": 51.7
+        },
+        {
+          "id": 2,
+          "name": "TDD with JS",
+          "hours": 14
+        },
+        {
+          "id": 3,
+          "name": "Git and Github in a real life",
+          "hours": 4
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "foundation": "Alura Online Courses (Mooc Platform)",
+      "courses": [
+        {
+          "id": 1,
+          "name": "Regular Expressions: Catching texts magically",
+          "hours": 12
+        },
+        {
+          "id": 2,
+          "name": "NodeJS: Writing a RESTful API",
+          "hours": 16
+        },
+        {
+          "id": 3,
+          "name": "NodeJS: Back-end with Javascript",
+          "hours": 16
+        },
+        {
+          "id": 4,
+          "name": "React: Reusable Components For Your WebApp",
+          "hours": 10
+        },
+        {
+          "id": 5,
+          "name": "React: Container Components and Life Cycle",
+          "hours": 10
+        },
+        {
+          "id": 6,
+          "name": "JavaScript Advanced I,II and III: ES6, object oriented and patterns",
+          "hours": 36
+        }
+      ]
+    }
+  ],
+  "generalInfo": [
+    {
+      "id": 1,
+      "label": "+31 06 517 30138",
+      "link": "+310651730138",
+      "type": "phone"
+    },
+    {
+      "id": 2,
+      "label": "Koolgracht, Leiden",
+      "link": "https://goo.gl/maps/C29PR8udifG2",
+      "type": "regular"
+    },
+    {
+      "id": 3,
+      "label": "melo.raulf@gmail.com",
+      "link": "melo.raulf@gmail.com",
+      "type": "email"
+    },
+    {
+      "id": 4,
+      "label": "linkedin.com/in/raulfdm",
+      "link": "https://www.linkedin.com/in/raulfdm",
+      "type": "regular"
+    },
+    {
+      "id": 5,
+      "label": "github.com/raulfdm",
+      "link": "https://github.com/raulfdm",
+      "type": "regular"
+    }
+  ],
+  "interests": [
+    "Open Source",
+    "Code for fun",
+    "Geek culture",
+    "Health Life",
+    "Workout"
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Tibia Character - GraphQL API",
+      "timeInit": "2017-02-01",
+      "timeEnd": "2017-02-10",
+      "description": [
+        "This project was built in order to make easy to retrieve information about characters on Tibia (MMORPG). The user can send a GraphQL query containing the character name and the application will make a data-scrapping on the official game website, organize all those information and send it back.",
+        "The API was built using NodeJS + ExpressJS + GraphQL and deployed on Heroku. Documentation is available at  https://github.com/raulfdm/tibia-api."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "TACO - Rest API",
+      "timeInit": "2017-01-01",
+      "timeEnd": "2017-01-30",
+      "description": [
+        "The main goal of this project was to create a RESTful API to be consumed for some client-side or services and to make easier to access all the information about the Brazilian Food Composition Table (TACO) made by UNICAMP (University of Campinas).",
+        "The API was built using NodeJS + ExpressJS and MongoDB and deployed on Heroku. Documentation is available at https://github.com/raulfdm/taco-api."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": 2,
+      "title": "Task Runners",
+      "skills": ["NPM Scripts", "Gulp"]
+    },
+    {
+      "id": 3,
+      "title": "Languages",
+      "skills": [
+        "CSS",
+        "HTML",
+        "JavaScript (ES6^)",
+        "GraphQL",
+        "TypeScript",
+        "Regex"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Useful Libraries",
+      "skills": ["momentJS", "Underscore", "ImmutableJS", "Styled-Component"]
+    },
+    {
+      "id": 4,
+      "title": "Testing",
+      "skills": ["Jasmine", "Jest", "Mocha", "Enzyme", "Cypress"]
+    },
+    {
+      "id": 9,
+      "title": "Pre-processor",
+      "skills": ["PostCSS", "SASS"]
+    },
+
+    {
+      "id": 5,
+      "title": "Module Loader/Bundler",
+      "skills": ["Browserify", "Webpack"]
+    },
+    {
+      "id": 6,
+      "title": "Frameworks",
+      "skills": ["ExpressJS", "React"]
+    },
+    {
+      "id": 13,
+      "title": "DevOPs",
+      "skills": ["CI/CD", "Travis"]
+    },
+    {
+      "id": 7,
+      "title": "Database",
+      "skills": ["MongoDB", "SQL Oracle", "Firebase Database"]
+    },
+    {
+      "id": 1,
+      "title": "Back-end Technologies",
+      "skills": ["NodeJS", "Golang"]
+    },
+
+    {
+      "id": 11,
+      "title": "Operation System",
+      "skills": ["MacOS", "Linux", "Windows"]
+    },
+    {
+      "id": 6,
+      "title": "Tools",
+      "skills": ["Git", "Photoshop", "NPM/Yarn", "Terminal"]
+    },
+    {
+      "id": 8,
+      "title": "Methodologies",
+      "skills": [
+        "Atomic Design",
+        "BEM",
+        "SMACSS",
+        "Functional Programing",
+        "JS Design Patterns",
+        "Regex",
+        "Responsive Web",
+        "PWA",
+        "MVC",
+        "RestFULL",
+        "Oriented Object Programing (OOP)"
+      ]
+    }
+  ]
+}
