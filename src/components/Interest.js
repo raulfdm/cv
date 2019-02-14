@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SectionTitle, SectionBody, Section } from '../Section';
-import interests from '../../globals/data/interest';
+
+import Section from './Section';
+import SectionBody from './SectionBody';
+import SectionTitle from './SectionTitle';
 
 const InterestItem = styled.p`
   ::before {
@@ -9,12 +11,12 @@ const InterestItem = styled.p`
   }
 `;
 
-export default () => {
+export default ({ data }) => {
   return (
     <Section>
       <SectionTitle title="Interest" />
       <SectionBody>
-        {interests.map((interest, index) => (
+        {data.map((interest, index) => (
           <InterestItem key={interest + index}>{interest}</InterestItem>
         ))}
       </SectionBody>

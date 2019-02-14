@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import experiences from '../../globals/data/experiences';
-import { generateTimeRange } from '../../utils/date.utils';
-import { Section, SectionBody, SectionTitle } from '../Section';
+
+import Section from './Section';
+import SectionBody from './SectionBody';
+import SectionTitle from './SectionTitle';
+import RangeDate from './RangeDate';
 
 export const Job = styled.div`
   margin-top: 1rem;
@@ -49,17 +51,19 @@ const generateJobDescription = jobDescription => {
   );
 };
 
-export default () => {
+export default ({ data }) => {
   return (
     <Section>
       <SectionTitle title="Career History" />
       <SectionBody>
-        {experiences.jobs.map(job => {
+        {data.jobs.map(job => {
           return (
             <Job key={job.id}>
               <JobInfos>
                 <CompanyName>{job.companyName}</CompanyName>
-                <WorkedTime>{generateTimeRange(job.timeInit, job.timeEnd)}</WorkedTime>
+                <WorkedTime>
+                  <RangeDate init={job.timeInit} end={job.timeEnd} />
+                </WorkedTime>
               </JobInfos>
               <JobTitle>{job.jobTitle}</JobTitle>
               {generateJobDescription(job.jobDescription)}

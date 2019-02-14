@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import extraCourses from '../../globals/data/extra-courses';
 
 const ExtraCourse = styled.section``;
 
@@ -28,7 +27,7 @@ const CourseItem = styled.p`
   }
 `;
 
-export default () => {
+export default ({ extraCourses }) => {
   return (
     <ExtraCourse>
       <Title>Extra Courses</Title>
