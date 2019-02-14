@@ -22,7 +22,7 @@ $ yarn install
 3. Run locally:
 
 ```sh
-$ yarn start
+$ yarn dev
 ```
 
 ## License

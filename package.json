@@ -12,7 +12,7 @@
   "scripts": {
     "prebuild": "rimraf public",
     "build": "gatsby build",
-    "start": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'"
   },
   "dependencies": {
