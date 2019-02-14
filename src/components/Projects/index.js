@@ -18,9 +18,7 @@ const ProjectsSection = styled(Section)`
   page-break-inside: auto;
 `;
 
-/* TODO: Fix it */
-// const ProjectDescription = styled(Linkify)``.extend(JobDescription);
-const ProjectDescription = styled(Linkify)``
+const ProjectDescription = styled(JobDescription)``.withComponent(Linkify);
 
 export default () => {
   return (
