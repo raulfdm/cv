@@ -31,7 +31,6 @@ const EducationWrapper = ({ data }) => {
           {education.it.map(({ id, timeInit, timeEnd, course, place }) => {
             return (
               <GraduationItem key={id}>
-                formatExperienceDate
                 <RangeDate init={timeInit} end={timeEnd} /> - {generateCourse(course, place)}
               </GraduationItem>
             );
