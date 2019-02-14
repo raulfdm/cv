@@ -5,8 +5,6 @@ import Section from './Section';
 import SectionBody from './SectionBody';
 import SectionTitle from './SectionTitle';
 
-import skillSet from '../globals/data/skills';
-
 const Title = styled.h3`
   margin: 0;
   margin-right: 0.5rem;
@@ -25,12 +23,12 @@ const Group = styled.div`
   align-items: baseline;
 `;
 
-export default () => {
+export default ({ data }) => {
   return (
     <Section>
-      <SectionTitle title="Tecnical Skills" />
+      <SectionTitle title="Technical Skills" />
       <SectionBody>
-        {skillSet.map(skill => {
+        {data.map(skill => {
           return (
             <Group key={skill.id}>
               <Title>{skill.title}</Title>

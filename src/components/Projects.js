@@ -5,9 +5,7 @@ import Linkify from 'linkifyjs/react';
 import Section from './Section';
 import SectionBody from './SectionBody';
 import SectionTitle from './SectionTitle';
-
-import { generateTimeRange } from '../utils/date.utils';
-
+import Time from './Time';
 import {
   CompanyName as ProjectName,
   Job as ProjectContainer,
@@ -16,7 +14,7 @@ import {
   WorkedTime as ProjectTime,
 } from './Jobs';
 
-import projects from '../globals/data/projects';
+import { formatExperienceDate } from '../utils/date.utils';
 
 const ProjectsSection = styled(Section)`
   page-break-inside: auto;
@@ -24,17 +22,21 @@ const ProjectsSection = styled(Section)`
 
 const ProjectDescription = styled(JobDescription)``.withComponent(Linkify);
 
-export default () => {
+export default ({ data }) => {
   return (
     <ProjectsSection>
       <SectionTitle title="Projects" />
       <SectionBody>
-        {projects.map(project => {
+        {data.map(project => {
           return (
             <ProjectContainer key={project.id}>
               <ProjectInfoContainer>
                 <ProjectName>{project.name}</ProjectName>
-                <ProjectTime>{generateTimeRange(project.timeInit, project.timeEnd)}</ProjectTime>
+                <ProjectTime>
+                  <Time time={formatExperienceDate(project.timeInit)} />
+                  {' - '}
+                  <Time time={formatExperienceDate(project.timeEnd)} />
+                </ProjectTime>
               </ProjectInfoContainer>
               {project.description.map((desc, index) => {
                 return (

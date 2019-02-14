@@ -5,9 +5,7 @@ import ExtraCourses from './ExtraCourses';
 import Section from './Section';
 import SectionBody from './SectionBody';
 import SectionTitle from './SectionTitle';
-
-import { generateTimeRange } from '../utils/date.utils';
-import education from '../globals/data/education';
+import RangeDate from './RangeDate';
 
 const ItemContainer = styled.div`
   padding: 0.4rem 0;
@@ -23,7 +21,8 @@ const GraduationItem = styled(Item)``;
 
 const generateCourse = (course, place) => `${course} - ${place}`;
 
-const EducationWrapper = () => {
+const EducationWrapper = ({ data }) => {
+  const { education, extraCourses } = data;
   return (
     <Section>
       <SectionTitle title="Education and Languages" />
@@ -32,7 +31,8 @@ const EducationWrapper = () => {
           {education.it.map(({ id, timeInit, timeEnd, course, place }) => {
             return (
               <GraduationItem key={id}>
-                {generateTimeRange(timeInit, timeEnd)} - {generateCourse(course, place)}
+                formatExperienceDate
+                <RangeDate init={timeInit} end={timeEnd} /> - {generateCourse(course, place)}
               </GraduationItem>
             );
           })}
@@ -42,7 +42,7 @@ const EducationWrapper = () => {
             <LanguageItem key={language.id}>{language.label}</LanguageItem>
           ))}
         </ItemContainer>
-        <ExtraCourses />
+        <ExtraCourses extraCourses={extraCourses} />
       </SectionBody>
     </Section>
   );
