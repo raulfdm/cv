@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import extraCourses from '../../globals/data/extra-courses';
+import extraCourses from '../globals/data/extra-courses';
 
 const ExtraCourse = styled.section``;
 

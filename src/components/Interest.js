@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SectionTitle, SectionBody, Section } from '../Section';
-import interests from '../../globals/data/interest';
+import { Section, SectionBody, SectionTitle } from './Section';
+import interests from '../globals/data/interest';
 
 const InterestItem = styled.p`
   ::before {

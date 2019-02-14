@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import generalInfos from '../../globals/data/general-info';
+import generalInfos from '../globals/data/general-info';
 
 const Infos = styled.section`
   text-align: center;

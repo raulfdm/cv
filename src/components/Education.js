@@ -1,10 +1,9 @@
 import React from 'react';
-
 import styled from 'styled-components';
-import education from '../../globals/data/education';
-import ExtraCourses from '../ExtraCourses';
-import { generateTimeRange } from '../../utils/date.utils';
-import { Section, SectionBody, SectionTitle } from '../Section/';
+import ExtraCourses from './ExtraCourses';
+import { generateTimeRange } from '../utils/date.utils';
+import education from '../globals/data/education';
+import { Section, SectionBody, SectionTitle } from './Section';
 
 const ItemContainer = styled.div`
   padding: 0.4rem 0;

@@ -2,17 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import Linkify from 'linkifyjs/react';
 
-import { generateTimeRange } from '../../utils/date.utils';
-import { Section, SectionBody, SectionTitle } from '../Section';
+import { generateTimeRange } from '../utils/date.utils';
+import { Section, SectionBody, SectionTitle } from './Section';
 import {
   CompanyName as ProjectName,
   Job as ProjectContainer,
   JobDescription,
   JobInfos as ProjectInfoContainer,
   WorkedTime as ProjectTime,
-} from '../Jobs';
+} from './Jobs';
 
-import projects from '../../globals/data/projects';
+import projects from '../globals/data/projects';
 
 const ProjectsSection = styled(Section)`
   page-break-inside: auto;
