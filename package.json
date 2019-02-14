@@ -14,11 +14,13 @@
     "format": "prettier --write 'src/**/*.js'"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.1.2",
     "gatsby-link": "^2.0.10",
     "gatsby-plugin-google-analytics": "^2.0.13",
     "gatsby-plugin-google-fonts": "^0.0.4",
     "gatsby-plugin-react-helmet": "^3.0.6",
+    "gatsby-plugin-styled-components": "^3.0.5",
     "linkifyjs": "^2.1.8",
     "modern-normalize": "^0.5.0",
     "moment": "^2.24.0",
