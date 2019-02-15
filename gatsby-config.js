@@ -22,7 +22,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: ['Lora', 'Raleway:400,700', 'Roboto'],
+        fonts: ['Lora:400,700', 'Raleway:400,700', 'Roboto'],
       },
     },
   ],

@@ -15,22 +15,31 @@ export const JobInfos = styled.div`
   font-size: 1.4rem;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   font-weight: bold;
 
   @media (min-width: 780px) {
     justify-content: flex-start;
+    flex-direction: row;
   }
 `;
 
 export const CompanyName = styled.p`
   margin: 0.5rem 0;
+  align-self: flex-start;
 `;
 
 export const WorkedTime = styled.p`
-  margin: 0.5rem 0;
   font-size: 0.9rem;
-  margin-left: 2rem;
+  align-self: flex-end;
+  margin: 0;
+
+  @media (min-width: 780px) {
+    align-self: flex-start;
+    margin: 0.5rem 0;
+    margin-left: 2rem;
+  }
 `;
 
 const JobTitle = styled.p`
