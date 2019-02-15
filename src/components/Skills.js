@@ -8,6 +8,7 @@ import SectionTitle from './SectionTitle';
 const Title = styled.h3`
   margin: 0;
   margin-right: 0.5rem;
+  font-weight: bold;
   ::after {
     content: ':';
   }
@@ -18,6 +19,7 @@ const Skills = styled.p`
 `;
 
 const Group = styled.div`
+  flex-direction: column;
   padding: 0.2rem 0;
   display: flex;
   align-items: baseline;
