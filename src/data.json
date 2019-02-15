@@ -231,22 +231,10 @@
         ]
      },
      {  
-        "id":"_eshdplj52",
-        "title":"Useful Libraries",
-        "skills":[  
-           "momentJS",
-           "Underscore",
-           "ImmutableJS",
-           "Styled-Component"
-        ]
-     },
-     {  
         "id":"_r9fejerbq",
         "title":"Testing",
         "skills":[  
-           "Jasmine",
            "Jest",
-           "Mocha",
            "Enzyme",
            "Cypress"
         ]
@@ -264,6 +252,7 @@
         "title":"Module Loader/Bundler",
         "skills":[  
            "Browserify",
+           "Rollup",
            "Webpack"
         ]
      },
@@ -279,8 +268,7 @@
         "id":"_2np3n1q5h",
         "title":"DevOPs",
         "skills":[  
-           "CI/CD",
-           "Travis"
+           "Basic CI/CD"
         ]
      },
      {  
@@ -288,7 +276,6 @@
         "title":"Database",
         "skills":[  
            "MongoDB",
-           "SQL Oracle",
            "Firebase Database"
         ]
      },
@@ -296,8 +283,7 @@
         "id":"_rob69rjdr",
         "title":"Back-end Technologies",
         "skills":[  
-           "NodeJS",
-           "Golang"
+           "NodeJS"
         ]
      },
      {  
@@ -325,14 +311,11 @@
         "skills":[  
            "Atomic Design",
            "BEM",
-           "SMACSS",
            "Functional Programing",
            "JS Design Patterns",
-           "Regex",
            "Responsive Web",
-           "PWA",
            "MVC",
-           "RestFULL",
+           "RESTFul",
            "Oriented Object Programing (OOP)"
         ]
      }
