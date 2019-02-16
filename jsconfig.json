@@ -3,6 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "src/*": ["./src/*"],
+      "styles/*": ["./src/styles/*"],
       "components/*": ["./src/components/*"],
       "atoms/*": ["./src/components/atoms/*"],
       "molecules/*": ["./src/components/molecules/*"],

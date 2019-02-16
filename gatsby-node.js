@@ -11,6 +11,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
     resolve: {
       modules: [path.resolve(__dirname, 'src'), 'node_modules'],
       alias: {
+        styles: path.resolve(__dirname, 'src/styles'),
         components: path.resolve(__dirname, 'src/components'),
         atoms: path.resolve(__dirname, 'src/components/atoms'),
         molecules: path.resolve(__dirname, 'src/components/molecules'),
