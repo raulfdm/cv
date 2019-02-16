@@ -19,10 +19,10 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: ${theme.font.serif};
-    color: ${theme.black};
+    color: ${theme.color.black};
   }
 
   a {
-    color: ${theme.black};
+    color: ${theme.color.black};
   }
 `;
