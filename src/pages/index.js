@@ -4,12 +4,13 @@ import styled from 'styled-components';
 import Layout from 'components/layout';
 
 import Headers from 'molecules/headers';
-import Information from 'molecules/information';
-import CareerSummary from 'molecules/career-summary';
-import SkillSet from 'molecules/skill-set';
-import Interests from 'molecules/interests';
 
-import CareerHistory from 'organisms/career-history';
+import Information from 'molecules/information-section';
+import CareerSummary from 'molecules/career-summary-section';
+import SkillSet from 'molecules/skill-set-section';
+import Interests from 'molecules/interests-section';
+
+import CareerHistory from 'organisms/career-history-section';
 import Projects from 'organisms/projects-section';
 import Education from 'organisms/education-section';
 
@@ -21,19 +22,6 @@ const CV = styled.main`
 
   padding: 0 1.6rem;
   margin: 0 auto;
-  /*
-  @media (max-width: 600px) {
-    width: 100%;
-    padding: 0 1rem;
-  }
-
-  @media (min-width: 601px) {
-    width: 90%;
-  }
-
-  @media (min-width: 960px) {
-    width: 70%;
-  } */
 `;
 
 const IndexPage = () => {
