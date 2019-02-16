@@ -28,6 +28,10 @@ const InfoLink = styled.a.attrs({
   text-decoration: none;
   padding-bottom: 1px;
   border-bottom: 1px solid;
+
+  @media screen and (min-width: ${props => props.theme.sizes.tablet}) {
+    font-size: 1.6rem;
+  }
 `;
 
 const generateHref = (type, link) => {
