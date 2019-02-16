@@ -20,9 +20,22 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: ${theme.font.serif};
     color: ${theme.color.black};
+
+    line-height: 1.6;
   }
 
   a {
     color: ${theme.color.black};
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a {
+    margin: 0;
   }
 `;
