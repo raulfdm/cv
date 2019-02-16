@@ -6,7 +6,7 @@ import Layout from 'components/layout';
 // import Infos from '../components/Infos';
 import Career from 'molecules/career-summary';
 import SkillSet from 'molecules/skill-set';
-// import Jobs from '../components/Jobs';
+import Experiences from 'organisms/experiences'
 // import Projects from '../components/Projects';
 // import Education from '../components/Education';
 // import Interest from '../components/Interest';
@@ -35,7 +35,7 @@ const IndexPage = () => {
   const {
     careerSummary,
     // education,
-    // experiences,
+    experiences,
     // extraCourses,
     // generalInfo,
     // interests,
@@ -50,7 +50,7 @@ const IndexPage = () => {
         {/* <Infos data={generalInfo} /> */}
         <Career data={careerSummary} />
         <SkillSet data={skillSet} />
-        {/* <Jobs data={experiences} /> */}
+        <Experiences data={experiences} />
         {/* <Projects data={projects} /> */}
         {/* <Education data={{ education, extraCourses }} /> */}
         {/* <Interest data={interests} /> */}
