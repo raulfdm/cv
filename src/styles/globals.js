@@ -1,10 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
-import 'modern-normalize/modern-normalize.css';
+import 'sanitize.css/sanitize.css';
 
 import theme from './theme';
 
 export const GlobalStyle = createGlobalStyle`
-  :root{
+  html{
     font-size: 10px;
   }
 
@@ -26,28 +26,3 @@ export const GlobalStyle = createGlobalStyle`
     color: ${theme.black};
   }
 `;
-
-/* TODO: Refactor Print
-@media print {
-    html,
-    body {
-      width: 210mm;
-      height: 297mm;
-    }
-    body > section {
-      margin-bottom: 1rem;
-    }
-  }
-
-  @media print {
-    @page {
-      margin: 0;
-      size: A4;
-      margin: 11mm 17mm 17mm 17mm;
-    }
-    body {
-      padding: 1.6cm;
-    }
-  }
-
-*/
