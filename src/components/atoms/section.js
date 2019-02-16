@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 import theme from 'styles/theme';
 
-export const Section = styled.section`
-  padding: 0 1.6rem;
-`;
+export const Section = styled.section``;
 
 export const SectionBody = styled.div`
   font-size: 1.4rem;
