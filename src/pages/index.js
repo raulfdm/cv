@@ -2,14 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Layout from 'components/layout';
+
 import Headers from 'molecules/headers';
 import Information from 'molecules/information';
 import CareerSummary from 'molecules/career-summary';
 import SkillSet from 'molecules/skill-set';
-import Experience from 'organisms/experience';
-// import Projects from '../components/organisms/projects';
-import Education from 'organisms/education';
 import Interests from 'molecules/interests';
+
+import CareerHistory from 'organisms/career-history';
+import Projects from 'organisms/projects-section';
+import Education from 'organisms/education-section';
 
 import data from 'data.json';
 
@@ -42,7 +44,7 @@ const IndexPage = () => {
     extraCourses,
     generalInfo,
     interests,
-    // projects,
+    projects,
     skillSet,
     headers,
   } = data;
@@ -54,8 +56,8 @@ const IndexPage = () => {
         <Information data={generalInfo} cvOf={headers.name} />
         <CareerSummary data={careerSummary} />
         <SkillSet data={skillSet} />
-        <Experience data={experience} />
-        {/* <Projects data={projects} /> */}
+        <CareerHistory data={experience} />
+        <Projects data={projects} />
         <Education data={{ education, extraCourses }} />
         <Interests data={interests} />
       </Layout>
