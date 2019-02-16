@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Section, SectionBody, SectionTitle } from 'atoms/section';
 
 const CareerParagraph = styled.p`
-  margin: 0.5rem 0;
+  margin-bottom: 0.8rem;
 `;
 
 export default ({ data }) => {

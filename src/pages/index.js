@@ -14,9 +14,9 @@ import Career from 'molecules/career-summary';
 import data from 'data.json';
 
 const CV = styled.main`
-  max-width: 70rem;
+  max-width: 98rem;
   margin: 0 auto;
-
+/*
   @media (max-width: 600px) {
     width: 100%;
     padding: 0 1rem;
@@ -28,7 +28,7 @@ const CV = styled.main`
 
   @media (min-width: 960px) {
     width: 70%;
-  }
+  } */
 `;
 
 const IndexPage = () => {

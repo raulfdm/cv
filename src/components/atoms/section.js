@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import theme from 'styles/theme';
 
 export const Section = styled.section`
+  padding: 0 1.6rem;
   &:not(:last-child) {
     margin-bottom: 2.4rem;
   }
@@ -9,6 +10,7 @@ export const Section = styled.section`
 
 export const SectionBody = styled.div`
   font-size: 1.4rem;
+  padding: 1.2rem 0;
 
   @media screen and (min-width: ${theme.sizes.tablet}) {
     font-size: 1.8rem;
