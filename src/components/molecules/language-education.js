@@ -3,15 +3,19 @@ import styled from 'styled-components';
 
 import CourseList from 'atoms/course-list';
 
+const StyledCourseList = styled(CourseList)`
+  padding: 1rem 0;
+`;
+
 const Language = styled.li``;
 
 const LanguageEducation = ({ education }) => {
   return (
-    <CourseList>
+    <StyledCourseList>
       {education.map(lang => (
         <Language key={lang.id}>{lang.label}</Language>
       ))}
-    </CourseList>
+    </StyledCourseList>
   );
 };
 
