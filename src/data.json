@@ -8,19 +8,19 @@
      "Responsible for the whole building process from configuring the general structure up to the deployment process. Focused on writing progressive web apps that are backward compatible, modern, maintainable with readable code and good performance. Also experienced in using NodeJS as platform to create CLI and scripts."
   ],
   "education":{  
-     "it":[  
+     "formal":[  
         {  
            "id":"_0yqfan2ak",
-           "timeInit":"2017-05-01",
-           "timeEnd":"2017-11-01",
-           "course":"Full Stack Web Development Certification, Computer Software Engineering",
+           "startOn":"2017-05-01",
+           "endOn":"2017-11-01",
+           "name":"Full Stack Web Development Certification, Computer Software Engineering",
            "place":"FreeCodeCamp"
         },
         {  
            "id":"_de8ei9i5v",
-           "timeInit":"2013-08-01",
-           "timeEnd":"2017-08-01",
-           "course":"Systems Information",
+           "startOn":"2013-08-01",
+           "endOn":"2017-08-01",
+           "name":"Systems Information",
            "place":"University of Ribeirão Preto (UNAERP)"
         }
      ],
@@ -40,8 +40,8 @@
         {  
            "id":"_fgwkmz9mt",
            "companyName":"YoungCapital",
-           "timeInit":"2017/11/01",
-           "timeEnd":"",
+           "startOn":"2017/11/01",
+           "endOn":"",
            "jobTitle":"JavaScript Developer",
            "jobDescription":[  
               "YoungCapital is a Dutch company founded in 2000 by Hugo de Koning, Bram Bosveld and Rogier Thewessen. Its main goal is to offer the best recruiting service with focus on online job search.",
@@ -56,8 +56,8 @@
         {  
            "id":"_rimk58fhl",
            "companyName":"Freelancer",
-           "timeInit":"2016/01/01",
-           "timeEnd":"2018/04/01",
+           "startOn":"2016/01/01",
+           "endOn":"2018/04/01",
            "jobTitle":"FullStack (JS) Developer",
            "jobDescription":[  
               "As a Freelancer, I got most of my projects through recommendations within my network.",
@@ -75,8 +75,8 @@
         {  
            "id":"_1zyycw56i",
            "companyName":"Sythex Technology in Systems",
-           "timeInit":"2014/08/01",
-           "timeEnd":"2016/12/01",
+           "startOn":"2014/08/01",
+           "endOn":"2016/12/01",
            "jobTitle":"Technical Support Analyst - Tier 2",
            "jobDescription":[  
               "Sythex Technology in Systems is a branch of Sênior System Group company which develops a well known application (in Brazil) for the whole management of different kind of warehouse (Warehouse Management System).",
@@ -195,8 +195,8 @@
      {  
         "id":"_ma9zg1b74",
         "name":"Tibia Character - GraphQL API",
-        "timeInit":"2017-02-01",
-        "timeEnd":"2017-02-10",
+        "startOn":"2017-02-01",
+        "endOn":"2017-02-10",
         "description":[  
            "This project was built in order to make easy to retrieve information about characters on Tibia (MMORPG). The user can send a GraphQL query containing the character name and the application will make a data-scrapping on the official game website, organize all those information and send it back.",
            "The API was built using NodeJS + ExpressJS + GraphQL and deployed on Heroku. Documentation is available at  https://github.com/raulfdm/tibia-api."
@@ -205,8 +205,8 @@
      {  
         "id":"_ds6gib7yg",
         "name":"TACO - Rest API",
-        "timeInit":"2017-01-01",
-        "timeEnd":"2017-01-30",
+        "startOn":"2017-01-01",
+        "endOn":"2017-01-30",
         "description":[  
            "The main goal of this project was to create a RESTful API to be consumed for some client-side or services and to make easier to access all the information about the Brazilian Food Composition Table (TACO) made by UNICAMP (University of Campinas).",
            "The API was built using NodeJS + ExpressJS and MongoDB and deployed on Heroku. Documentation is available at https://github.com/raulfdm/taco-api."
