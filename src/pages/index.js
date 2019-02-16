@@ -1,17 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Layout from '../components/layout';
-import Headers from '../components/Headers';
-import Infos from '../components/Infos';
-import Career from '../components/Career';
-import Skills from '../components/Skills';
-import Jobs from '../components/Jobs';
-import Projects from '../components/Projects';
-import Education from '../components/Education';
-import Interest from '../components/Interest';
+import Layout from 'components/layout';
+// import Headers from '../components/Headers';
+// import Infos from '../components/Infos';
+import Career from 'molecules/career-summary';
+// import Skills from '../components/Skills';
+// import Jobs from '../components/Jobs';
+// import Projects from '../components/Projects';
+// import Education from '../components/Education';
+// import Interest from '../components/Interest';
 
-import data from '../data.json';
+import data from 'data.json';
 
 const CV = styled.main`
   max-width: 70rem;
@@ -34,26 +34,26 @@ const CV = styled.main`
 const IndexPage = () => {
   const {
     careerSummary,
-    education,
-    experiences,
-    extraCourses,
-    generalInfo,
-    interests,
-    projects,
-    skills,
+    // education,
+    // experiences,
+    // extraCourses,
+    // generalInfo,
+    // interests,
+    // projects,
+    // skills,
   } = data;
 
   return (
     <CV>
       <Layout>
-        <Headers />
-        <Infos data={generalInfo} />
+        {/* <Headers /> */}
+        {/* <Infos data={generalInfo} /> */}
         <Career data={careerSummary} />
-        <Skills data={skills} />
-        <Jobs data={experiences} />
-        <Projects data={projects} />
-        <Education data={{ education, extraCourses }} />
-        <Interest data={interests} />
+        {/* <Skills data={skills} /> */}
+        {/* <Jobs data={experiences} /> */}
+        {/* <Projects data={projects} /> */}
+        {/* <Education data={{ education, extraCourses }} /> */}
+        {/* <Interest data={interests} /> */}
       </Layout>
     </CV>
   );
