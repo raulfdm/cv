@@ -3,9 +3,6 @@ import theme from 'styles/theme';
 
 export const Section = styled.section`
   padding: 0 1.6rem;
-  &:not(:last-child) {
-    margin-bottom: 2.4rem;
-  }
 `;
 
 export const SectionBody = styled.div`
