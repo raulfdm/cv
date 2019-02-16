@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import Layout from 'components/layout';
 // import Headers from '../components/Headers';
 // import Infos from '../components/Infos';
-import Career from 'molecules/career-summary';
+import CareerSummary from 'molecules/career-summary';
 import SkillSet from 'molecules/skill-set';
-import Experiences from 'organisms/experiences'
+import Experience from 'organisms/experience'
 // import Projects from '../components/Projects';
 // import Education from '../components/Education';
 // import Interest from '../components/Interest';
@@ -48,9 +48,9 @@ const IndexPage = () => {
       <Layout>
         {/* <Headers /> */}
         {/* <Infos data={generalInfo} /> */}
-        <Career data={careerSummary} />
+        <CareerSummary data={careerSummary} />
         <SkillSet data={skillSet} />
-        <Experiences data={experiences} />
+        <Experience data={experiences} />
         {/* <Projects data={projects} /> */}
         {/* <Education data={{ education, extraCourses }} /> */}
         {/* <Interest data={interests} /> */}
