@@ -7,7 +7,7 @@ const CareerParagraph = styled.p`
   margin-bottom: 0.8rem;
 `;
 
-export default ({ data }) => {
+const CareerSummary = ({ data }) => {
   return (
     <Section>
       <SectionTitle>Career Summary</SectionTitle>
@@ -19,3 +19,5 @@ export default ({ data }) => {
     </Section>
   );
 };
+
+export default CareerSummary;
