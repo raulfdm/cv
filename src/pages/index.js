@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 import Layout from 'components/layout';
 // import Headers from '../components/Headers';
-// import Infos from '../components/Infos';
+import Information from 'molecules/information';
 import CareerSummary from 'molecules/career-summary';
 import SkillSet from 'molecules/skill-set';
-import Experience from 'organisms/experience'
+import Experience from 'organisms/experience';
 // import Projects from '../components/Projects';
 // import Education from '../components/Education';
 // import Interest from '../components/Interest';
@@ -35,9 +35,10 @@ const IndexPage = () => {
   const {
     careerSummary,
     // education,
-    experiences,
+    experience,
     // extraCourses,
-    // generalInfo,
+    generalInfo,
+    professionalName,
     // interests,
     // projects,
     skillSet,
@@ -47,10 +48,10 @@ const IndexPage = () => {
     <CV>
       <Layout>
         {/* <Headers /> */}
-        {/* <Infos data={generalInfo} /> */}
+        <Information data={generalInfo} cvOf={professionalName} />
         <CareerSummary data={careerSummary} />
         <SkillSet data={skillSet} />
-        <Experience data={experiences} />
+        <Experience data={experience} />
         {/* <Projects data={projects} /> */}
         {/* <Education data={{ education, extraCourses }} /> */}
         {/* <Interest data={interests} /> */}
