@@ -38,4 +38,14 @@ export const GlobalStyle = createGlobalStyle`
   a {
     margin: 0;
   }
+
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    display: inline;
+  }
 `;

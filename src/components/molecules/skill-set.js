@@ -17,15 +17,9 @@ const Title = styled.h3`
   }
 `;
 
-const List = styled.ul`
-  margin: 0;
-  padding: 0;
-`;
+const List = styled.ul``;
 
 const Skill = styled.li`
-  list-style: none;
-  display: inline;
-
   &:not(:last-child) {
     ::after {
       content: ', ';
@@ -42,7 +36,6 @@ const SkillSet = ({ data }) => {
           return (
             <Group key={skill.id}>
               <Title>{skill.title}</Title>
-
               <List>
                 {skill.skills.map(value => (
                   <Skill key={value}>{value}</Skill>
