@@ -1,8 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-export default () => {
-  const name = 'Raul Felipe de Melo';
+export default ({ name, description }) => {
   return (
     <Helmet>
       <title>{name}</title>
@@ -11,10 +10,7 @@ export default () => {
       <meta name="author" content={name} />
       <meta name="robots" content="index,nofollow" />
 
-      <meta
-        name="description"
-        content="JavaScript Developer with more than 4 years of experience. Perfom front-end and back-end applications using JavaScript (vanilla or frameworks)."
-      />
+      <meta name="description" content={description} />
     </Helmet>
   );
 };

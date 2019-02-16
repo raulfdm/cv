@@ -1,18 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Section from './Section';
-import SectionBody from './SectionBody';
-import SectionTitle from './SectionTitle';
+import { Section, SectionBody, SectionTitle } from 'atoms/section';
 
 const CareerParagraph = styled.p`
-  margin: 0.5rem 0;
+  margin-bottom: 0.8rem;
 `;
 
-export default ({ data }) => {
+const CareerSummary = ({ data }) => {
   return (
     <Section>
-      <SectionTitle title="Career Summary" />
+      <SectionTitle>Career Summary</SectionTitle>
       <SectionBody>
         {data.map((paragraph, index) => (
           <CareerParagraph key={index}>{paragraph}</CareerParagraph>
@@ -21,3 +19,5 @@ export default ({ data }) => {
     </Section>
   );
 };
+
+export default CareerSummary;
