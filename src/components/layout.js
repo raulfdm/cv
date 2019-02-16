@@ -1,12 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GlobalStyle } from '../globals/global-styles';
+import { ThemeProvider } from 'styled-components';
+
+import theme from '../styles/theme';
+import { GlobalStyle } from '../styles/globals';
 
 const Layout = ({ children }) => (
-  <div>
-    <GlobalStyle />
-    {children}
-  </div>
+  <ThemeProvider theme={theme}>
+    <React.Fragment>
+      <GlobalStyle />
+      {children}
+    </React.Fragment>
+  </ThemeProvider>
 );
 
 Layout.propTypes = {
