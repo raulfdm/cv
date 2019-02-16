@@ -1,15 +1,15 @@
 import React from 'react';
 
-import Time from './Time';
+import Time from 'atoms/Time';
 
-import { formatExperienceDate } from '../utils/date.utils';
+import { formatExperienceDate } from 'utils/date.utils';
 
 const RangeDate = ({ init, end }) => {
   return (
     <React.Fragment>
       <Time time={formatExperienceDate(init)} />
       {' - '}
-      <Time time={formatExperienceDate(end) || 'Actual'} />
+      <Time time={formatExperienceDate(end) || 'Present'} />
     </React.Fragment>
   );
 };
