@@ -45,7 +45,7 @@ const ExperienceComponent = ({ data }) => {
             <Information>
               <CompanyName>{job.companyName}</CompanyName>
               <WorkedTime>
-                <RangeDate init={job.timeInit} end={job.timeEnd} />
+                <RangeDate init={job.startOn} end={job.endOn} />
               </WorkedTime>
             </Information>
             <ExperienceDescription description={job.jobDescription} />
