@@ -8,7 +8,7 @@ import CareerSummary from 'molecules/career-summary';
 import SkillSet from 'molecules/skill-set';
 import Experience from 'organisms/experience';
 // import Projects from '../components/organisms/projects';
-// import Education from '../components/Education';
+import Education from 'organisms/education';
 import Interests from 'molecules/interests';
 
 import data from 'data.json';
@@ -37,9 +37,9 @@ const CV = styled.main`
 const IndexPage = () => {
   const {
     careerSummary,
-    // education,
+    education,
     experience,
-    // extraCourses,
+    extraCourses,
     generalInfo,
     interests,
     // projects,
@@ -56,7 +56,7 @@ const IndexPage = () => {
         <SkillSet data={skillSet} />
         <Experience data={experience} />
         {/* <Projects data={projects} /> */}
-        {/* <Education data={{ education, extraCourses }} /> */}
+        <Education data={{ education, extraCourses }} />
         <Interests data={interests} />
       </Layout>
     </CV>
