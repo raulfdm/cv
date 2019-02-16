@@ -1,14 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize/modern-normalize.css';
 
-export const GlobalStyle = createGlobalStyle`
-  p {
-    margin-top: 0.5rem;
-    margin-bottom: 0.754rem;
-  }
+import theme from './theme';
 
-  a {
-    color: black;
+export const GlobalStyle = createGlobalStyle`
+  :root{
+    font-size: 10px;
   }
 
   h1,
@@ -17,25 +14,21 @@ export const GlobalStyle = createGlobalStyle`
   h4,
   h5,
   h6 {
-    font-size: 1rem;
-    font-family: 'Lora', sans-serif;
-  }
-
-  ul {
-    padding-left: 1.5rem;
+    font-family: ${theme.font.sans};
   }
 
   body {
-    font-family: 'Raleway', serif;
-    line-height: 1.4;
+    font-family: ${theme.font.serif};
+    color: ${theme.black};
   }
 
-  @page {
-    size: A4;
-    margin: 11mm 17mm 17mm 17mm;
+  a {
+    color: ${theme.black};
   }
+`;
 
-  @media print {
+/* TODO: Refactor Print
+@media print {
     html,
     body {
       width: 210mm;
@@ -49,9 +42,12 @@ export const GlobalStyle = createGlobalStyle`
   @media print {
     @page {
       margin: 0;
+      size: A4;
+      margin: 11mm 17mm 17mm 17mm;
     }
     body {
       padding: 1.6cm;
     }
   }
-`;
+
+*/
