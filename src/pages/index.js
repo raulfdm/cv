@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Layout from 'components/layout';
-// import Headers from '../components/Headers';
+import Headers from 'molecules/headers';
 import Information from 'molecules/information';
 import CareerSummary from 'molecules/career-summary';
 import SkillSet from 'molecules/skill-set';
@@ -15,6 +15,9 @@ import data from 'data.json';
 
 const CV = styled.main`
   max-width: 98rem;
+  width: 100%;
+
+  padding: 0 1.6rem;
   margin: 0 auto;
   /*
   @media (max-width: 600px) {
@@ -38,17 +41,17 @@ const IndexPage = () => {
     experience,
     // extraCourses,
     generalInfo,
-    professionalName,
     // interests,
     // projects,
     skillSet,
+    headers,
   } = data;
 
   return (
     <CV>
       <Layout>
-        {/* <Headers /> */}
-        <Information data={generalInfo} cvOf={professionalName} />
+        <Headers name={headers.name} description={headers.description} />
+        <Information data={generalInfo} cvOf={headers.name} />
         <CareerSummary data={careerSummary} />
         <SkillSet data={skillSet} />
         <Experience data={experience} />
