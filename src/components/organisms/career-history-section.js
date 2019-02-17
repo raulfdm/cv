@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import { SectionTitle, SectionBody, Section } from 'atoms/section';
 import {
@@ -11,9 +12,13 @@ import {
 import RangeDate from 'molecules/range-date';
 import ExperienceDescription from 'molecules/experience-description';
 
+const StyledSection = styled(Section)`
+  page-break-before: always;
+`;
+
 const CareerHistory = ({ data }) => {
   return (
-    <Section>
+    <StyledSection>
       <SectionTitle>Career History</SectionTitle>
       <SectionBody>
         {data.jobs.map(job => (
@@ -29,7 +34,7 @@ const CareerHistory = ({ data }) => {
           </Experience>
         ))}
       </SectionBody>
-    </Section>
+    </StyledSection>
   );
 };
 

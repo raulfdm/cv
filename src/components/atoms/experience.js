@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Experience = styled.div`
+  page-break-inside: avoid;
+
   &:not(:last-child) {
     margin-bottom: 1.6rem;
   }

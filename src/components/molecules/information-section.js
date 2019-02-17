@@ -4,6 +4,10 @@ import styled from 'styled-components';
 const InformationWrapper = styled.section`
   text-align: center;
   padding: 1.6rem 0;
+
+  @media print {
+    padding: 0;
+  }
 `;
 
 const Name = styled.h1`
@@ -18,6 +22,9 @@ const InfoList = styled.ul`
 const InfoItem = styled.li`
   :not(:last-child) {
     margin-bottom: 0.3rem;
+    @media print {
+      margin-bottom: 0;
+    }
   }
 `;
 const InfoLink = styled.a.attrs({
@@ -31,6 +38,10 @@ const InfoLink = styled.a.attrs({
 
   @media screen and (min-width: ${props => props.theme.sizes.tablet}) {
     font-size: 1.6rem;
+  }
+
+  @media print {
+    border: none;
   }
 `;
 
