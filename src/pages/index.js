@@ -15,13 +15,20 @@ import Projects from 'organisms/projects-section';
 import Education from 'organisms/education-section';
 
 import data from 'data.json';
+import PrintStyles from 'styles/print';
 
 const CV = styled.main`
-  max-width: 98rem;
+  max-width: 79.8rem;
   width: 100%;
 
   padding: 0 1.6rem;
   margin: 0 auto;
+
+  @media print {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
 `;
 
 const IndexPage = () => {
@@ -39,8 +46,9 @@ const IndexPage = () => {
 
   return (
     <CV>
+      <Headers name={headers.name} description={headers.description} />
       <Layout>
-        <Headers name={headers.name} description={headers.description} />
+        <PrintStyles />
         <Information data={generalInfo} cvOf={headers.name} />
         <CareerSummary data={careerSummary} />
         <SkillSet data={skillSet} />

@@ -15,6 +15,7 @@ export const SectionBody = styled.div`
 export const SectionTitle = styled.h2`
   font-size: 2rem;
   border-bottom: 1px solid ${theme.color.grey};
+  page-break-after: avoid;
 
   @media screen and (min-width: ${theme.sizes.tablet}) {
     font-size: 2.8rem;
