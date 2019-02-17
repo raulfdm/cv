@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react';
+import styled, { keyframes } from 'styled-components';
 
 import Layout from 'components/layout';
 
@@ -9,13 +9,27 @@ import Information from 'molecules/information-section';
 import CareerSummary from 'molecules/career-summary-section';
 import SkillSet from 'molecules/skill-set-section';
 import Interests from 'molecules/interests-section';
-
 import CareerHistory from 'organisms/career-history-section';
 import Projects from 'organisms/projects-section';
 import Education from 'organisms/education-section';
 
+import PageLoader from 'molecules/page-loader';
+
 import data from 'data.json';
 import PrintStyles from 'styles/print';
+
+const END_ANIMATION_MILLISECONDS = 2000;
+
+const slideInBckCenter = keyframes`
+  0% {
+    transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+`;
 
 const CV = styled.main`
   max-width: 79.8rem;
@@ -23,6 +37,8 @@ const CV = styled.main`
 
   padding: 0 1.6rem;
   margin: 0 auto;
+
+  animation: ${slideInBckCenter} 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   @media print {
     margin: 0;
@@ -44,20 +60,30 @@ const IndexPage = () => {
     headers,
   } = data;
 
+  const [isLoading, handleIsLoading] = useState(true);
+
+  setTimeout(() => {
+    handleIsLoading(false);
+  }, END_ANIMATION_MILLISECONDS);
+
   return (
-    <CV>
+    <Layout>
       <Headers name={headers.name} description={headers.description} />
-      <Layout>
-        <PrintStyles />
-        <Information data={generalInfo} cvOf={headers.name} />
-        <CareerSummary data={careerSummary} />
-        <SkillSet data={skillSet} />
-        <CareerHistory data={experience} />
-        <Projects data={projects} />
-        <Education data={{ education, extraCourses }} />
-        <Interests data={interests} />
-      </Layout>
-    </CV>
+      {isLoading ? (
+        <PageLoader />
+      ) : (
+        <CV>
+          <PrintStyles />
+          <Information data={generalInfo} cvOf={headers.name} />
+          <CareerSummary data={careerSummary} />
+          <SkillSet data={skillSet} />
+          <CareerHistory data={experience} />
+          <Projects data={projects} />
+          <Education data={{ education, extraCourses }} />
+          <Interests data={interests} />
+        </CV>
+      )}
+    </Layout>
   );
 };
 
