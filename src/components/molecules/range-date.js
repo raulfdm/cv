@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Time from 'atoms/Time';
+import Time from 'src/components/atoms/Time';
 
 import { formatExperienceDate } from 'utils/date.utils';
 
