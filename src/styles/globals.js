@@ -3,6 +3,15 @@ import 'sanitize.css/sanitize.css';
 
 import theme from './theme';
 
+export const GlobalFullHeight = createGlobalStyle`
+  html,
+  body,
+  #___gatsby,
+  #___gatsby > div[role="group"] {
+    height: 100%
+  }
+`;
+
 export const GlobalStyle = createGlobalStyle`
   html{
     font-size: 10px;

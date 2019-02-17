@@ -1,16 +1,9 @@
 import React from 'react';
 import Layout from 'components/layout';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-const GlobalStyled = createGlobalStyle`
-  html,
-  body,
-  #___gatsby,
-  #___gatsby > div[role="group"] {
-    height: 100%
-  }
-`;
+import { GlobalFullHeight } from 'styles/globals';
 
 const Page = styled.div`
   height: 100%;
@@ -41,7 +34,7 @@ const GoBack = styled(Link)`
 const NotFoundPage = () => (
   <Layout>
     <Page>
-      <GlobalStyled />
+      <GlobalFullHeight />
       <Message>
         <Title>404 - Page not found</Title>
         <Text>You just hit a route that doesn't exist... the sadness.</Text>
