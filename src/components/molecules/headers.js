@@ -11,6 +11,10 @@ export default ({ name, description }) => {
       <meta name="robots" content="index,nofollow" />
 
       <meta name="description" content={description} />
+      <link
+        href="https://fonts.googleapis.com/css?family=Lora:400,700|Raleway:400,700|Roboto&display=swap"
+        rel="stylesheet"
+      />
     </Helmet>
   );
 };
