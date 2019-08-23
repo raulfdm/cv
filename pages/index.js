@@ -15,7 +15,7 @@ import Education from 'organisms/education-section';
 
 import PageLoader from 'molecules/page-loader';
 
-import data from 'data.json';
+import data from '../src/data.json';
 import PrintStyles from 'styles/print';
 
 const END_ANIMATION_MILLISECONDS = 2000;
