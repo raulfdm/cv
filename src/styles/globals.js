@@ -6,8 +6,8 @@ import theme from './theme';
 export const GlobalFullHeight = createGlobalStyle`
   html,
   body,
-  #___gatsby,
-  #___gatsby > div[role="group"] {
+  #__next,
+  #__next > div[role="group"] {
     height: 100%
   }
 `;
