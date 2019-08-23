@@ -1,6 +1,14 @@
 {
   "name": "cv",
   "version": "0.1.0",
+  "description": "Online static CV using React with NextJS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raulfdm/cv"
+  },
+  "homepage": "https://raulmelo-cv.now.sh",
+  "author": "Raul Melo <melo.raulf@gmail.com>",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
