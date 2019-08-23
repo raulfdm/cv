@@ -1,10 +1,10 @@
 # CV Online
 > :briefcase: Responsive and Printable CV using React and rendering a static website with GatsbyJS!
 
-## Dependencies
-- [GatsbyJS](https://www.gatsbyjs.org/) - Generate static websites with React.
-- [styled-components](https://www.styled-components.com/) - Styling React components 
-- [Netlify](https://www.netlify.com) - Hosting and CI
+## Stack
+- [NextJS](https://nextjs.org/) - React Server Side Rendering;
+- [styled-components](https://www.styled-components.com/) - Styling React components;
+- [Zeit.co](https://zeit.co) - Hosting and CI;
 
 ## Running
 
