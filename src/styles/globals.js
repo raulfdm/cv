@@ -13,6 +13,8 @@ export const GlobalFullHeight = createGlobalStyle`
 `;
 
 export const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Lora:400,700|Raleway:400,700|Roboto&display=swap');
+
   html{
     font-size: 10px;
   }
