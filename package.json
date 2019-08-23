@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
+    "axios": "^0.19.0",
     "dayjs": "^1.8.15",
     "linkifyjs": "^2.1.8",
     "next": "9.0.4",

@@ -15,7 +15,7 @@ import Education from 'organisms/education-section';
 
 import PageLoader from 'molecules/page-loader';
 
-import data from '../src/data.json';
+import { useData } from 'utils/useData';
 import PrintStyles from 'styles/print';
 
 const END_ANIMATION_MILLISECONDS = 2000;
@@ -48,6 +48,9 @@ const CV = styled.main`
 `;
 
 const IndexPage = () => {
+  const [isLoading, handleIsLoading] = useState(true);
+  const { data, isLoadingData } = useData();
+
   const {
     careerSummary,
     education,
@@ -60,28 +63,28 @@ const IndexPage = () => {
     headers,
   } = data;
 
-  const [isLoading, handleIsLoading] = useState(true);
-
   setTimeout(() => {
     handleIsLoading(false);
   }, END_ANIMATION_MILLISECONDS);
 
   return (
     <Layout>
-      <Headers name={headers.name} description={headers.description} />
-      {isLoading ? (
+      {isLoading || isLoadingData ? (
         <PageLoader />
       ) : (
-        <CV>
-          <PrintStyles />
-          <Information data={generalInfo} cvOf={headers.name} />
-          <CareerSummary data={careerSummary} />
-          <SkillSet data={skillSet} />
-          <CareerHistory data={experience} />
-          <Projects data={projects} />
-          <Education data={{ education, extraCourses }} />
-          <Interests data={interests} />
-        </CV>
+        <React.Fragment>
+          <Headers name={headers.name} description={headers.description} />
+          <CV>
+            <PrintStyles />
+            <Information data={generalInfo} cvOf={headers.name} />
+            <CareerSummary data={careerSummary} />
+            <SkillSet data={skillSet} />
+            <CareerHistory data={experience} />
+            <Projects data={projects} />
+            <Education data={{ education, extraCourses }} />
+            <Interests data={interests} />
+          </CV>
+        </React.Fragment>
       )}
     </Layout>
   );
