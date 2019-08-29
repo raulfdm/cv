@@ -1,0 +1,11 @@
+{
+  "build": {
+    "env": {
+      "API_KEY": "@api_key",
+      "AUTH_DOMAIN": "@auth_domain",
+      "DATABASE_URL": "@database_url",
+      "PROJECT_ID": "@project_id",
+      "APP_ID": "@app_id"
+    }
+  }
+}

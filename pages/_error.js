@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from 'components/layout';
 import styled from 'styled-components';
-import Link from 'next/link';
+import BackToCvButton from 'molecules/back-to-cv-button';
 
 import { GlobalFullHeight } from 'styles/globals';
 
@@ -26,12 +26,6 @@ const Text = styled.p`
   font-size: 1.6rem;
 `;
 
-const GoBack = styled.a`
-  margin-top: 2rem;
-  font-size: 1.4rem;
-  text-decoration: underline;
-`;
-
 const NotFoundPage = () => (
   <Layout>
     <Page>
@@ -40,9 +34,7 @@ const NotFoundPage = () => (
         <Title>404 - Page not found</Title>
         <Text>You just hit a route that doesn't exist... the sadness.</Text>
       </Message>
-      <Link href="/">
-        <GoBack>Go back to the CV</GoBack>
-      </Link>
+      <BackToCvButton />
     </Page>
   </Layout>
 );
