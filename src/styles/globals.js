@@ -26,6 +26,7 @@ export const GlobalStyle = createGlobalStyle`
   h5,
   h6 {
     font-family: ${theme.font.sans};
+    font-weight: bold;
   }
 
   body {

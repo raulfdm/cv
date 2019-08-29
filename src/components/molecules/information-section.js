@@ -61,14 +61,15 @@ const Information = ({ data, cvOf }) => {
     <InformationWrapper>
       <Name>{cvOf}</Name>
       <InfoList>
-        {data.map(exp => {
+        {/* {data.map(exp => {
+          console.log('exp', exp);
           const { id, label, type, link } = exp;
           return (
             <InfoItem key={id}>
               <InfoLink href={generateHref(type, link)}>{label}</InfoLink>
             </InfoItem>
           );
-        })}
+        })} */}
       </InfoList>
     </InformationWrapper>
   );
