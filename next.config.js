@@ -16,21 +16,6 @@ const webpackConfig = config => {
 
   return config;
 };
-console.log('AHHHHHHHHHHHHHHHH', {
-  API_KEY: process.env.API_KEY,
-  AUTH_DOMAIN: process.env.AUTH_DOMAIN,
-  DATABASE_URL: process.env.DATABASE_URL,
-  PROJECT_ID: process.env.PROJECT_ID,
-  APP_ID: process.env.APP_ID,
-});
-
-console.log('AHHHHHHHHHHHHHHHH2', {
-  API_KEY: process.env.api_key,
-  AUTH_DOMAIN: process.env.auth_domain,
-  DATABASE_URL: process.env.database_url,
-  PROJECT_ID: process.env.project_id,
-  APP_ID: process.env.app_id,
-});
 
 module.exports = withPlugins([[withCSS, {}]], {
   env: {
