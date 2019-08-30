@@ -45,7 +45,7 @@ const ExtraCourseForm = ({
                       type="text"
                       className="input"
                       placeholder="Course name"
-                      name={getFieldName('course_name')}
+                      name={getFieldName('name')}
                       render={({ input }) => {
                         return (
                           <InputField className="field">

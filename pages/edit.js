@@ -34,20 +34,14 @@ const EditCv = ({ authProps }) => {
   const [isSavingData, setIsSavingData] = React.useState(false);
 
   const onSubmit = formValue => {
-    console.log('formValue', formValue);
-    /* TODO: REMOVE IT */
-    const foo = true;
-
-    if (foo) {
-      setIsSavingData(true);
-      axios
-        .put('https://personal-cv-87ac0.firebaseio.com/new-cv.json', {
-          ...formValue,
-        })
-        .then(() => {
-          setIsSavingData(false);
-        });
-    }
+    setIsSavingData(true);
+    axios
+      .put('https://personal-cv-87ac0.firebaseio.com/new-cv.json', {
+        ...formValue,
+      })
+      .then(() => {
+        setIsSavingData(false);
+      });
   };
 
   const { data } = useData('https://personal-cv-87ac0.firebaseio.com/new-cv.json');

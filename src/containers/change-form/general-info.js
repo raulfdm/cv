@@ -18,12 +18,8 @@ const GeneralInfoContainer = () => {
       ...fieldsetValues,
       [uuid()]: {
         name: infoName,
-        values: [
-          {
-            label: '',
-            href: '',
-          },
-        ],
+        label: '',
+        href: '',
       },
     };
 
@@ -47,8 +43,7 @@ const GeneralInfoContainer = () => {
     <FormCardGroup title="General Info">
       {fieldsetValues &&
         Object.entries(fieldsetValues).map(([infoId, infoData]) => {
-          const getFieldName = (name, index) =>
-            `${FIELDSET_NAME}.${infoId}.values[${index}].${name}`;
+          const getFieldName = name => `${FIELDSET_NAME}.${infoId}.${name}`;
 
           return (
             <GeneralInfoForm

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { MainContext } from 'src/contexts/main';
 import CourseList from 'atoms/course-list';
 
 const StyledCourseList = styled(CourseList)`
@@ -9,11 +10,17 @@ const StyledCourseList = styled(CourseList)`
 
 const Language = styled.li``;
 
-const LanguageEducation = ({ education }) => {
+const LanguageEducation = () => {
+  const { languages } = React.useContext(MainContext);
+
+  if (!languages) {
+    return null;
+  }
+
   return (
     <StyledCourseList>
-      {education.map(lang => (
-        <Language key={lang.id}>{lang.label}</Language>
+      {languages.map(lang => (
+        <Language key={lang.value}>{lang.label}</Language>
       ))}
     </StyledCourseList>
   );

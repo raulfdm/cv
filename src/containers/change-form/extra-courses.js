@@ -31,7 +31,7 @@ const ExtraCoursesContainer = () => {
       ...fieldsetValues,
       [uuid()]: {
         platform_name: name,
-        courses: [{ course_name: '', hours: '' }],
+        courses: [{ name: '', hours: '' }],
       },
     };
 
@@ -64,7 +64,7 @@ const ExtraCoursesContainer = () => {
   function onNewCourse(platformId) {
     return () => {
       const platform = fieldsetValues[platformId];
-      platform.courses.push({ course_name: '', hours: '' });
+      platform.courses.push({ name: '', hours: '' });
 
       const updatedCourses = {
         ...fieldsetValues,

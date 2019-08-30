@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import RangeDate from 'molecules/range-date';
+
+import { MainContext } from 'src/contexts/main';
 import CourseList from 'atoms/course-list';
+import RangeDate from 'molecules/range-date';
 
 const FormalItem = styled.li``;
 
@@ -17,17 +19,22 @@ const Company = styled.p`
   display: inline;
 `;
 
-const FormalEducation = ({ education }) => {
+const FormalEducation = () => {
+  const { formal_education } = React.useContext(MainContext);
+
+  if (!formal_education) {
+    return null;
+  }
+
   return (
     <CourseList>
-      {education.map(edu => {
-        const { startOn, endOn, name, place, id } = edu;
+      {Object.entries(formal_education).map(([educationId, educationData]) => {
         return (
-          <FormalItem key={id}>
+          <FormalItem key={educationId}>
             <Period>
-              <RangeDate init={startOn} end={endOn} />
+              <RangeDate init={educationData.start_date} end={educationData.end_date} />
             </Period>
-            <Company>{`${name} - ${place}`}</Company>
+            <Company>{`${educationData.name} - ${educationData.foundation}`}</Company>
           </FormalItem>
         );
       })}

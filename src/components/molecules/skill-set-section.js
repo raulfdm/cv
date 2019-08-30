@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Section, SectionBody, SectionTitle } from 'atoms/section';
+import { MainContext } from 'src/contexts/main';
 
 const Group = styled.div`
   flex-direction: column;
@@ -27,18 +28,24 @@ const Skill = styled.li`
   }
 `;
 
-const SkillSet = ({ data }) => {
+const SkillSet = () => {
+  const { hard_skills } = React.useContext(MainContext);
+
   return (
     <Section>
       <SectionTitle>Technical Skills</SectionTitle>
       <SectionBody>
-        {data.map(skill => {
+        {Object.entries(hard_skills).map(([hardSkillId, hardSkillData]) => {
+          if (!hardSkillData.values) {
+            return null;
+          }
+
           return (
-            <Group key={skill.id}>
-              <Title>{skill.title}</Title>
+            <Group key={hardSkillId}>
+              <Title>{hardSkillData.name}</Title>
               <List>
-                {skill.skills.map(value => (
-                  <Skill key={value}>{value}</Skill>
+                {hardSkillData.values.map(name => (
+                  <Skill key={name.value}>{name.label}</Skill>
                 ))}
               </List>
             </Group>

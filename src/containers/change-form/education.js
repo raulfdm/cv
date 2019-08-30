@@ -17,7 +17,7 @@ const EducationContainer = () => {
 
   function onAddEducation() {
     const newEducation = {
-      course_name: '',
+      name: '',
       foundation: '',
       is_actual: false,
       start_date: '',
