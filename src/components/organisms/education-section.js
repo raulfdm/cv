@@ -6,16 +6,14 @@ import LanguageEducation from 'molecules/language-education';
 
 import ExtraCourses from 'organisms/extra-courses';
 
-const EducationWrapper = ({ data }) => {
-  const { education, extraCourses } = data;
-
+const EducationWrapper = () => {
   return (
     <Section>
       <SectionTitle>Education and Languages</SectionTitle>
       <SectionBody>
-        <FormalEducation education={education.formal} />
-        <LanguageEducation education={education.language} />
-        <ExtraCourses extraCourses={extraCourses} />
+        <FormalEducation />
+        <LanguageEducation />
+        <ExtraCourses />
       </SectionBody>
     </Section>
   );

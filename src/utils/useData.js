@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const urlV0 = 'https://personal-cv-87ac0.firebaseio.com/cv.json';
+const urlV0 = 'https://personal-cv-87ac0.firebaseio.com/new-cv.json';
 
 export function useData(url = urlV0) {
   const [data, setData] = useState({});

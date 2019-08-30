@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { MainContext } from 'src/contexts/main';
+
 const InformationWrapper = styled.section`
   text-align: center;
   padding: 1.6rem 0;
@@ -45,31 +47,25 @@ const InfoLink = styled.a.attrs({
   }
 `;
 
-const generateHref = (type, link) => {
-  switch (type) {
-    case 'email':
-      return `mailto:${link}`;
-    case 'phone':
-      return `tel:${link}`;
-    default:
-      return link;
-  }
-};
+const Information = () => {
+  const { headers, general_info, ...all } = React.useContext(MainContext);
 
-const Information = ({ data, cvOf }) => {
+  console.log('all', all);
+  if (!headers) {
+    return null;
+  }
+
   return (
     <InformationWrapper>
-      <Name>{cvOf}</Name>
+      <Name>{headers.name}</Name>
       <InfoList>
-        {/* {data.map(exp => {
-          console.log('exp', exp);
-          const { id, label, type, link } = exp;
+        {Object.entries(general_info).map(([infoId, infoData]) => {
           return (
-            <InfoItem key={id}>
-              <InfoLink href={generateHref(type, link)}>{label}</InfoLink>
+            <InfoItem key={infoId}>
+              <InfoLink href={infoData.href}>{infoData.label}</InfoLink>
             </InfoItem>
           );
-        })} */}
+        })}
       </InfoList>
     </InformationWrapper>
   );

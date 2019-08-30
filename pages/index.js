@@ -13,12 +13,8 @@ import CareerHistory from 'organisms/career-history-section';
 import Projects from 'organisms/projects-section';
 import Education from 'organisms/education-section';
 
-import PageLoader from 'molecules/page-loader';
-
-import { useData } from 'utils/useData';
 import PrintStyles from 'styles/print';
-
-const END_ANIMATION_MILLISECONDS = 2000;
+import { MainContextProvider } from 'src/contexts/main';
 
 const slideInBckCenter = keyframes`
   0% {
@@ -48,44 +44,21 @@ const CV = styled.main`
 `;
 
 const IndexPage = () => {
-  const [isLoading, handleIsLoading] = useState(true);
-  const { data, isLoadingData } = useData();
-
-  const {
-    careerSummary,
-    education,
-    experience,
-    extraCourses,
-    generalInfo,
-    interests,
-    projects,
-    skillSet,
-    headers,
-  } = data;
-
-  setTimeout(() => {
-    handleIsLoading(false);
-  }, END_ANIMATION_MILLISECONDS);
-
   return (
     <Layout>
-      {isLoading || isLoadingData ? (
-        <PageLoader />
-      ) : (
-        <React.Fragment>
-          <Headers name={headers.name} description={headers.description} />
-          <CV>
-            <PrintStyles />
-            <Information data={generalInfo} cvOf={headers.name} />
-            <CareerSummary data={careerSummary} />
-            <SkillSet data={skillSet} />
-            <CareerHistory data={experience} />
-            <Projects data={projects} />
-            <Education data={{ education, extraCourses }} />
-            <Interests data={interests} />
-          </CV>
-        </React.Fragment>
-      )}
+      <MainContextProvider>
+        <Headers />
+        <PrintStyles />
+        <CV>
+          <Information />
+          <CareerSummary />
+          <SkillSet />
+          <CareerHistory />
+          <Projects />
+          <Education />
+          <Interests />
+        </CV>
+      </MainContextProvider>
     </Layout>
   );
 };

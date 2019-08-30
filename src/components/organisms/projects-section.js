@@ -2,29 +2,37 @@ import React from 'react';
 import styled from 'styled-components';
 import Linkify from 'linkifyjs/react';
 
-import { Section, SectionBody, SectionTitle } from 'atoms/section';
-import { Experience, ExperienceInfo, ExperienceName, ExperiencePeriod } from 'atoms/experience';
+import { MainContext } from 'src/contexts/main';
+import { stringToArrayOfParagrahs } from 'src/utils/string.utils';
 import ExperienceDescription from 'molecules/experience-description';
 import RangeDate from 'molecules/range-date';
+import { Experience, ExperienceInfo, ExperienceName, ExperiencePeriod } from 'atoms/experience';
+import { Section, SectionBody, SectionTitle } from 'atoms/section';
 
 const ProjectDescription = styled(ExperienceDescription)``.withComponent(Linkify);
 
-export default ({ data }) => {
+export default () => {
+  const { projects } = React.useContext(MainContext);
+
+  if (!projects) {
+    return null;
+  }
+
   return (
     <Section>
       <SectionTitle>Projects</SectionTitle>
       <SectionBody>
-        {data.map(project => {
+        {Object.entries(projects).map(([projectId, projectData]) => {
           return (
-            <Experience key={project.id}>
+            <Experience key={projectId}>
               <ExperienceInfo>
-                <ExperienceName>{project.name}</ExperienceName>
+                <ExperienceName>{projectData.project_name}</ExperienceName>
                 <ExperiencePeriod>
-                  <RangeDate end={project.endOn} init={project.startOn} />
+                  <RangeDate end={projectData.end_date} init={projectData.start_date} />
                 </ExperiencePeriod>
               </ExperienceInfo>
-              {project.description.map((desc, index) => (
-                <ProjectDescription key={index + desc.substr(0, 10)}>{desc}</ProjectDescription>
+              {stringToArrayOfParagrahs(projectData.description).map(paragraph => (
+                <ProjectDescription key={paragraph}>{paragraph}</ProjectDescription>
               ))}
             </Experience>
           );

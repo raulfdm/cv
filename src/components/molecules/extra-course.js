@@ -12,18 +12,22 @@ const CourseItem = styled.li`
   }
 `;
 
-const ExtraCourse = ({ extraCourse }) => {
+const Platform = styled.div``;
+
+const ExtraCourse = ({ platform_name, courses }) => {
+  if (!courses || !platform_name) {
+    return null;
+  }
+
   return (
-    <React.Fragment>
-      <CompanyName>{extraCourse.foundation}</CompanyName>
+    <Platform>
+      <CompanyName>{platform_name}</CompanyName>
       <CourseList>
-        {extraCourse.courses.map(course => {
-          return (
-            <CourseItem key={course.id}>{`${course.name} - ${course.hours} Hours`}</CourseItem>
-          );
+        {courses.map((course, index) => {
+          return <CourseItem key={index}>{`${course.name} - ${course.hours} Hours`}</CourseItem>;
         })}
       </CourseList>
-    </React.Fragment>
+    </Platform>
   );
 };
 

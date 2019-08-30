@@ -36,7 +36,7 @@ const FormalEducationForm = ({ is_actual, prefix, onDeleteEducation }) => {
                 className="input"
                 type="text"
                 placeholder="Computer Science"
-                name={getFieldName('course_name')}
+                name={getFieldName('name')}
               />
             </div>
           </div>

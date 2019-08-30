@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { SectionTitle, SectionBody, Section } from 'atoms/section';
+import { stringToArrayOfParagrahs } from 'utils/string.utils';
+import { MainContext } from 'src/contexts/main';
+import RangeDate from 'molecules/range-date';
+import ExperienceDescription from 'molecules/experience-description';
 import {
   Experience,
   ExperienceInfo,
@@ -9,28 +12,31 @@ import {
   ExperiencePeriod,
   ExperienceTitle,
 } from 'atoms/experience';
-import RangeDate from 'molecules/range-date';
-import ExperienceDescription from 'molecules/experience-description';
+import { SectionTitle, SectionBody, Section } from 'atoms/section';
 
 const StyledSection = styled(Section)`
   page-break-before: always;
 `;
 
-const CareerHistory = ({ data }) => {
+const CareerHistory = () => {
+  const { experiences } = React.useContext(MainContext);
+
   return (
     <StyledSection>
       <SectionTitle>Career History</SectionTitle>
       <SectionBody>
-        {data.jobs.map(job => (
-          <Experience key={job.id}>
-            <ExperienceTitle>{job.jobTitle}</ExperienceTitle>
+        {Object.entries(experiences).map(([experienceId, experienceData]) => (
+          <Experience key={experienceId}>
+            <ExperienceTitle>{experienceData.role}</ExperienceTitle>
             <ExperienceInfo>
-              <CompanyName>{job.companyName}</CompanyName>
+              <CompanyName>{experienceData.company}</CompanyName>
               <ExperiencePeriod>
-                <RangeDate init={job.startOn} end={job.endOn} />
+                <RangeDate init={experienceData.start_date} end={experienceData.end_date} />
               </ExperiencePeriod>
             </ExperienceInfo>
-            <ExperienceDescription description={job.jobDescription} />
+            <ExperienceDescription
+              description={stringToArrayOfParagrahs(experienceData.job_description)}
+            />
           </Experience>
         ))}
       </SectionBody>

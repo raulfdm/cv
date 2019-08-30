@@ -34,7 +34,7 @@ const SideProjectForm = ({ is_actual, prefix, onDeleteProject }) => {
             className="input"
             type="text"
             placeholder="Computer Science"
-            name={getFieldName('course_name')}
+            name={getFieldName('project_name')}
           />
         </div>
       </div>
