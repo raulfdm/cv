@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import sortBy from 'lodash.sortby';
 
 import { MainContext } from 'src/contexts/main';
 
@@ -50,7 +51,6 @@ const InfoLink = styled.a.attrs({
 const Information = () => {
   const { headers, general_info, ...all } = React.useContext(MainContext);
 
-  console.log('all', all);
   if (!headers) {
     return null;
   }
@@ -59,13 +59,15 @@ const Information = () => {
     <InformationWrapper>
       <Name>{headers.name}</Name>
       <InfoList>
-        {Object.entries(general_info).map(([infoId, infoData]) => {
-          return (
-            <InfoItem key={infoId}>
-              <InfoLink href={infoData.href}>{infoData.label}</InfoLink>
-            </InfoItem>
-          );
-        })}
+        {sortBy(Object.entries(general_info), ([_, data]) => data.position).map(
+          ([infoId, infoData]) => {
+            return (
+              <InfoItem key={infoId}>
+                <InfoLink href={infoData.href}>{infoData.label}</InfoLink>
+              </InfoItem>
+            );
+          },
+        )}
       </InfoList>
     </InformationWrapper>
   );

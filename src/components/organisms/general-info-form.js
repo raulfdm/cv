@@ -5,6 +5,14 @@ import styled from 'styled-components';
 import FieldSet from 'molecules/fieldset';
 import DeleteButton from 'organisms/delete-button';
 
+const StyledFieldset = styled(FieldSet)`
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  .label-title {
+    font-size: 1.4rem;
+  }
+`;
+
 const ActionControl = styled.p`
   display: flex;
 `;
@@ -13,7 +21,7 @@ const GeneralInfoForm = props => {
   const { name, getFieldName, onDelete } = props;
 
   return (
-    <FieldSet label={name}>
+    <StyledFieldset label={name} labelProps={{ className: 'label-title' }}>
       <div className="columns is-multiline">
         <div className="column is-12">
           <div className="field is-horizontal">
@@ -25,6 +33,7 @@ const GeneralInfoForm = props => {
                 render={({ input }) => {
                   return (
                     <div className="field">
+                      <label className="label">Label</label>
                       <div className="control is-expanded">
                         <input className="input" placeholder="Label to be displayed" {...input} />
                       </div>
@@ -39,8 +48,24 @@ const GeneralInfoForm = props => {
                 render={({ input }) => {
                   return (
                     <div className="field">
+                      <label className="label">href</label>
                       <div className="control is-expanded">
                         <input className="input" placeholder="anchor href" {...input} />
+                      </div>
+                    </div>
+                  );
+                }}
+              />
+              <Field
+                type="number"
+                className="input"
+                name={getFieldName('position')}
+                render={({ input }) => {
+                  return (
+                    <div className="field" style={{ width: 50, flexGrow: 0 }}>
+                      <label className="label">Order</label>
+                      <div className="control is-expanded">
+                        <input className="input" placeholder="Label to be displayed" {...input} />
                       </div>
                     </div>
                   );
@@ -53,7 +78,7 @@ const GeneralInfoForm = props => {
           </div>
         </div>
       </div>
-    </FieldSet>
+    </StyledFieldset>
   );
 };
 

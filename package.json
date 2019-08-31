@@ -29,6 +29,7 @@
     "firebase": "^6.4.2",
     "linkifyjs": "^2.1.8",
     "lodash.set": "^4.3.2",
+    "lodash.sortby": "^4.7.0",
     "next": "9.0.4",
     "next-ga": "^2.3.4",
     "react": "16.9.0",
