@@ -1,7 +1,7 @@
 import React from 'react';
 import SingleInputActions from './single-input-actions';
 
-const EditLabel = ({ label, onConfirm }) => {
+const EditLabel = ({ label, onConfirm, ...props }) => {
   const [isEditing, setIsEditing] = React.useState(false);
 
   return isEditing ? (
@@ -13,6 +13,7 @@ const EditLabel = ({ label, onConfirm }) => {
       }}
       label="New value"
       onCancel={() => setIsEditing(false)}
+      {...props}
     />
   ) : (
     <label
@@ -20,6 +21,7 @@ const EditLabel = ({ label, onConfirm }) => {
       onDoubleClick={() => {
         setIsEditing(true);
       }}
+      {...props}
     >
       {label}
     </label>
