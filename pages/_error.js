@@ -32,7 +32,7 @@ const NotFoundPage = () => (
       <GlobalFullHeight />
       <Message>
         <Title>404 - Page not found</Title>
-        <Text>You just hit a route that doesn't exist... the sadness.</Text>
+        <Text>{`You just hit a route that doesn't exist... the sadness.`}</Text>
       </Message>
       <BackToCvButton />
     </Page>

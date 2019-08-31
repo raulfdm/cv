@@ -1,5 +1,6 @@
 import React from 'react';
 import { Field } from 'react-final-form';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import EditLabel from './edit-label';
@@ -29,6 +30,17 @@ const FieldSet = ({
       </div>
     </div>
   );
+};
+
+FieldSet.propTypes = {
+  label: PropTypes.string,
+  className: PropTypes.string,
+  editable: PropTypes.bool,
+  onConfirm: PropTypes.func,
+  children: PropTypes.node,
+  wrapperProps: PropTypes.object,
+  fieldProps: PropTypes.object,
+  labelProps: PropTypes.object,
 };
 
 export default FieldSet;

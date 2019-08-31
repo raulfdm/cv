@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import SingleInputActions from 'molecules/single-input-actions';
 import AddNewButton from 'atoms/add-new-button';
@@ -24,6 +25,10 @@ const NewExtraCourse = ({ onCreate }) => {
       Add new Field
     </AddNewButton>
   );
+};
+
+NewExtraCourse.propTypes = {
+  onCreate: PropTypes.func,
 };
 
 export default NewExtraCourse;

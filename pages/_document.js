@@ -1,4 +1,5 @@
 /* Boilerplate from https://www.styled-components.com/docs/advanced/#nextjs */
+import React from 'react';
 import Document from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 

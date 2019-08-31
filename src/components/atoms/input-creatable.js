@@ -1,6 +1,7 @@
 import React from 'react';
 import Creatable from 'react-select/creatable';
 import { Field } from 'react-final-form';
+import PropTypes from 'prop-types';
 
 const createOptions = label => ({ label, value: label });
 
@@ -47,6 +48,10 @@ const InputCreatable = ({ name }) => {
       }}
     ></Field>
   );
+};
+
+InputCreatable.propTypes = {
+  name: PropTypes.string,
 };
 
 export default InputCreatable;

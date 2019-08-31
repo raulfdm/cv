@@ -1,5 +1,6 @@
 import React from 'react';
 import Creatable from 'react-select/creatable';
+import PropTypes from 'prop-types';
 import { Field } from 'react-final-form';
 import styled from 'styled-components';
 
@@ -55,6 +56,15 @@ const TagField = ({ fieldName, onAddTag, name, values, deleteSkill, onConfirmLab
 
 TagField.defaultProps = {
   values: [],
+};
+
+TagField.propTypes = {
+  fieldName: PropTypes.string,
+  onAddTag: PropTypes.func,
+  name: PropTypes.string,
+  values: PropTypes.array,
+  deleteSkill: PropTypes.func,
+  onConfirmLabelChange: PropTypes.func,
 };
 
 export default TagField;

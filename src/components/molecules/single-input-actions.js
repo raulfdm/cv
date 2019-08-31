@@ -1,13 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const SingleInputActions = ({
-  label,
-  inputValue,
-
-  inputProps,
-  onConfirm,
-  onCancel,
-}) => {
+const SingleInputActions = ({ label, inputValue, inputProps, onConfirm, onCancel }) => {
   const [localInputValue, setInputValue] = React.useState(inputValue);
 
   React.useEffect(() => {
@@ -53,6 +47,14 @@ const SingleInputActions = ({
       </div>
     </>
   );
+};
+
+SingleInputActions.propTypes = {
+  label: PropTypes.string,
+  inputValue: PropTypes.string,
+  inputProps: PropTypes.object,
+  onConfirm: PropTypes.func,
+  onCancel: PropTypes.func,
 };
 
 export default SingleInputActions;

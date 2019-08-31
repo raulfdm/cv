@@ -1,4 +1,5 @@
-import { createContext, useState } from 'react';
+import React, { createContext, useState } from 'react';
+import PropTypes from 'prop-types';
 
 import PageLoader from 'molecules/page-loader';
 import { useData } from 'utils/useData';
@@ -21,4 +22,8 @@ export const MainContextProvider = ({ children }) => {
       {isLoading || isLoadingData ? <PageLoader /> : children}
     </MainContext.Provider>
   );
+};
+
+MainContextProvider.propTypes = {
+  children: PropTypes.node,
 };

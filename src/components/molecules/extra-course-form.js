@@ -1,6 +1,7 @@
 import React from 'react';
 import { Field } from 'react-final-form';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import FieldSet from 'molecules/fieldset';
 import DeleteButton from 'organisms/delete-button';
@@ -91,6 +92,15 @@ const ExtraCourseForm = ({
       </div>
     </FieldSet>
   );
+};
+
+ExtraCourseForm.propTypes = {
+  platform_name: PropTypes.string,
+  prefix: PropTypes.string,
+  onNewCourse: PropTypes.func,
+  courses: PropTypes.array,
+  onDeleteCourseFromPlatform: PropTypes.func,
+  onPlatformRename: PropTypes.func,
 };
 
 export default ExtraCourseForm;

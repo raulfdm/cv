@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import SingleInputActions from './single-input-actions';
 
 const EditLabel = ({ label, onConfirm, ...props }) => {
@@ -26,6 +28,11 @@ const EditLabel = ({ label, onConfirm, ...props }) => {
       {label}
     </label>
   );
+};
+
+EditLabel.propTypes = {
+  label: PropTypes.string,
+  onConfirm: PropTypes.func,
 };
 
 export default EditLabel;

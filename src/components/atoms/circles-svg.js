@@ -1,13 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 const CircleLoader = props => (
   <svg width={57} height={57} stroke="#fff" {...props}>
-    <g
-      transform="translate(1 1)"
-      strokeWidth={2}
-      fill="none"
-      fillRule="evenodd"
-    >
+    <g transform="translate(1 1)" strokeWidth={2} fill="none" fillRule="evenodd">
       <circle cx={5} cy={50} r={5}>
         <animate
           attributeName="cy"
@@ -70,6 +65,6 @@ const CircleLoader = props => (
       </circle>
     </g>
   </svg>
-)
+);
 
-export default CircleLoader
+export default CircleLoader;

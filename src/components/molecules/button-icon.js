@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Button = styled.button`
@@ -23,4 +24,8 @@ const ButtonIcon = ({ icon, variant, ...rest }) => {
   );
 };
 
+ButtonIcon.propTypes = {
+  icon: PropTypes.node,
+  variant: PropTypes.variant,
+};
 export default ButtonIcon;

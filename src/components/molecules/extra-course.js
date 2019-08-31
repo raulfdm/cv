@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import CourseList from 'atoms/course-list';
 
@@ -29,6 +30,11 @@ const ExtraCourse = ({ platform_name, courses }) => {
       </CourseList>
     </Platform>
   );
+};
+
+ExtraCourse.propTypes = {
+  platform_name: PropTypes.string,
+  courses: PropTypes.array,
 };
 
 export default ExtraCourse;

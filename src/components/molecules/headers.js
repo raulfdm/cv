@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { MainContext } from 'src/contexts/main';
 
-export default () => {
+const Headers = () => {
   const { headers } = React.useContext(MainContext);
 
   return (
@@ -17,3 +17,5 @@ export default () => {
     </Helmet>
   );
 };
+
+export default Headers;
