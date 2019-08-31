@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { Field } from 'react-final-form';
 
 import DeleteButton from 'organisms/delete-button';
@@ -101,6 +102,13 @@ const SideProjectForm = ({ is_actual, prefix, onDeleteProject }) => {
       <ActionButton onClick={onDeleteProject} />
     </Wrapper>
   );
+};
+
+SideProjectForm.propTypes = {
+  input: PropTypes.object,
+  is_actual: PropTypes.bool,
+  onDeleteProject: PropTypes.func,
+  prefix: PropTypes.string,
 };
 
 export default SideProjectForm;

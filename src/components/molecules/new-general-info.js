@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import AddNewButton from 'src/components/atoms/add-new-button';
 import SingleInputActions from './single-input-actions';
@@ -24,6 +25,10 @@ const NewGeneralInfo = ({ onAddInfo }) => {
       Add new Info
     </AddNewButton>
   );
+};
+
+NewGeneralInfo.propTypes = {
+  onAddInfo: PropTypes.func,
 };
 
 export default NewGeneralInfo;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { Field } from 'react-final-form';
 
 import DeleteButton from 'organisms/delete-button';
@@ -23,7 +24,7 @@ const Sepator = styled.p`
   align-items: center;
 `;
 
-const Experience = ({ id, prefix, is_actual, onDeleteExperience }) => {
+const Experience = ({ prefix, is_actual, onDeleteExperience }) => {
   const getFieldName = name => `${prefix}.${name}`;
   return (
     <Wrapper className="columns is-multiline">
@@ -52,13 +53,13 @@ const Experience = ({ id, prefix, is_actual, onDeleteExperience }) => {
           </div>
           <div className="column is-5">
             <Field type="date" name={getFieldName('end_date')}>
-              {props => (
+              {({ input }) => (
                 <input
                   className="input"
                   disabled={is_actual}
                   placeholder="2018-02-19"
-                  {...props.input}
-                  value={is_actual ? '' : props.input.value}
+                  {...input}
+                  value={is_actual ? '' : input.value}
                 />
               )}
             </Field>
@@ -92,6 +93,12 @@ const Experience = ({ id, prefix, is_actual, onDeleteExperience }) => {
       <ActionButton onClick={onDeleteExperience} />
     </Wrapper>
   );
+};
+
+Experience.propTypes = {
+  prefix: PropTypes.string,
+  is_actual: PropTypes.boolean,
+  onDeleteExperience: PropTypes.func,
 };
 
 export default Experience;

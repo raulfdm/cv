@@ -49,7 +49,7 @@ const InfoLink = styled.a.attrs({
 `;
 
 const Information = () => {
-  const { headers, general_info, ...all } = React.useContext(MainContext);
+  const { headers, general_info } = React.useContext(MainContext);
 
   if (!headers) {
     return null;
@@ -59,7 +59,7 @@ const Information = () => {
     <InformationWrapper>
       <Name>{headers.name}</Name>
       <InfoList>
-        {sortBy(Object.entries(general_info), ([_, data]) => data.position).map(
+        {sortBy(Object.entries(general_info), ([, data]) => data.position).map(
           ([infoId, infoData]) => {
             return (
               <InfoItem key={infoId}>

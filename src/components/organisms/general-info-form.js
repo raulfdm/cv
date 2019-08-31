@@ -1,6 +1,7 @@
 import React from 'react';
 import { Field } from 'react-final-form';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import FieldSet from 'molecules/fieldset';
 import DeleteButton from 'organisms/delete-button';
@@ -17,9 +18,7 @@ const ActionControl = styled.p`
   display: flex;
 `;
 
-const GeneralInfoForm = props => {
-  const { name, getFieldName, onDelete } = props;
-
+const GeneralInfoForm = ({ name, getFieldName, onDelete }) => {
   return (
     <StyledFieldset label={name} labelProps={{ className: 'label-title' }}>
       <div className="columns is-multiline">
@@ -80,6 +79,12 @@ const GeneralInfoForm = props => {
       </div>
     </StyledFieldset>
   );
+};
+
+GeneralInfoForm.propTypes = {
+  name: PropTypes.string,
+  getFieldName: PropTypes.func,
+  onDelete: PropTypes.func,
 };
 
 export default GeneralInfoForm;

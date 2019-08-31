@@ -11,7 +11,7 @@ import { Section, SectionBody, SectionTitle } from 'atoms/section';
 
 const ProjectDescription = styled(ExperienceDescription)``.withComponent(Linkify);
 
-export default () => {
+const ProjectSection = () => {
   const { projects } = React.useContext(MainContext);
 
   if (!projects) {
@@ -41,3 +41,5 @@ export default () => {
     </Section>
   );
 };
+
+export default ProjectSection;

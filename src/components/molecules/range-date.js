@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Time from 'atoms/time';
 
@@ -12,6 +13,11 @@ const RangeDate = ({ init, end }) => {
       <Time time={formatExperienceDate(end) || 'Present'} />
     </React.Fragment>
   );
+};
+
+RangeDate.propTypes = {
+  init: PropTypes.string,
+  end: PropTypes.string,
 };
 
 export default RangeDate;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 export const DescriptionList = styled.ul`
   display: flex;
@@ -8,7 +9,7 @@ export const DescriptionList = styled.ul`
 
 export const DescriptionItem = styled.li`
   &:not(:last-child) {
-    margin-bottom: .3rem;
+    margin-bottom: 0.3rem;
   }
 `;
 
@@ -20,6 +21,10 @@ const ExperienceDescription = ({ description }) => {
       ))}
     </DescriptionList>
   );
+};
+
+ExperienceDescription.propTypes = {
+  description: PropTypes.array,
 };
 
 export default ExperienceDescription;

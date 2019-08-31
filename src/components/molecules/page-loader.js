@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
 import CirclesSvg from 'atoms/circles-svg';
 
 import { GlobalFullHeight } from 'styles/globals';
@@ -23,6 +25,10 @@ const PageLoader = ({ isLoading }) => {
       <StyledLoader />
     </PageLoaderWrapper>
   );
+};
+
+PageLoader.propTypes = {
+  isLoading: PropTypes.bool,
 };
 
 export default PageLoader;

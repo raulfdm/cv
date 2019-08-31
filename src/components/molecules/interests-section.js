@@ -11,7 +11,7 @@ const InterestItem = styled.li`
   }
 `;
 
-export default () => {
+const InterestsSection = () => {
   const { interests } = React.useContext(MainContext);
   if (!interests) {
     return null;
@@ -30,3 +30,5 @@ export default () => {
     </Section>
   );
 };
+
+export default InterestsSection;

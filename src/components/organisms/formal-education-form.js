@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { Field } from 'react-final-form';
 
 import DeleteButton from 'organisms/delete-button';
@@ -105,6 +106,13 @@ const FormalEducationForm = ({ is_actual, prefix, onDeleteEducation }) => {
       <hr />
     </Wrapper>
   );
+};
+
+FormalEducationForm.propTypes = {
+  is_actual: PropTypes.boolean,
+  prefix: PropTypes.string,
+  onDeleteEducation: PropTypes.func,
+  input: PropTypes.object,
 };
 
 export default FormalEducationForm;

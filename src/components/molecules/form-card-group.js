@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const FormCardGroup = ({ children, title }) => {
   return (
@@ -12,6 +13,11 @@ const FormCardGroup = ({ children, title }) => {
       <br />
     </React.Fragment>
   );
+};
+
+FormCardGroup.propTypes = {
+  children: PropTypes.node,
+  title: PropTypes.string,
 };
 
 export default FormCardGroup;

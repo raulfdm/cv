@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import axios from 'axios';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 
 import { useData } from 'utils/useData';
 
@@ -98,6 +99,10 @@ const EditCv = ({ authProps }) => {
       />
     </main>
   );
+};
+
+EditCv.propTypes = {
+  authProps: PropTypes.object,
 };
 
 export default withAuthProtection(EditCv);

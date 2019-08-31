@@ -12,7 +12,7 @@ const Title = styled.h3`
   font-size: 1.8rem;
 `;
 
-export default () => {
+const ExtraCourseWrapper = () => {
   const { extra_courses } = React.useContext(MainContext);
 
   if (!extra_courses) {
@@ -28,3 +28,5 @@ export default () => {
     </ExtraCourses>
   );
 };
+
+export default ExtraCourseWrapper;
