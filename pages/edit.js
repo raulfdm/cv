@@ -2,9 +2,9 @@ import React from 'react';
 import { Form } from 'react-final-form';
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
+import Link from 'next/link';
 import axios from 'axios';
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 
 import { useData } from 'utils/useData';
 
@@ -31,7 +31,7 @@ const LogoutButtonWrapper = styled.div`
   text-align: right;
 `;
 
-const EditCv = ({ authProps }) => {
+const EditCv = () => {
   const [isSavingData, setIsSavingData] = React.useState(false);
 
   const onSubmit = formValue => {
@@ -51,9 +51,9 @@ const EditCv = ({ authProps }) => {
     <main className="container">
       <GlobalStyles />
       <LogoutButtonWrapper>
-        <a className="is-primary" onClick={authProps.logout}>
-          Logout
-        </a>
+        <Link href="/logout">
+          <a className="is-primary">Logout</a>
+        </Link>
       </LogoutButtonWrapper>
 
       <Form
@@ -99,10 +99,6 @@ const EditCv = ({ authProps }) => {
       />
     </main>
   );
-};
-
-EditCv.propTypes = {
-  authProps: PropTypes.object,
 };
 
 export default withAuthProtection(EditCv);
