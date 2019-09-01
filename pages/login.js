@@ -119,13 +119,15 @@ const Login = () => {
                 placeholder="Your secrets here"
                 required
               />
-              <StyldButton type="submit">Login</StyldButton>
+              <StyldButton type="submit" data-cy="btn-login">
+                Login
+              </StyldButton>
             </StyledForm>
           );
         }}
       />
-      {error && <ErrorLabel>{error}</ErrorLabel>}
-      <BackToCvButton />
+      {error && <ErrorLabel data-cy="error-message">{error}</ErrorLabel>}
+      <BackToCvButton data-cy="back-to-home" />
     </Layout>
   );
 };

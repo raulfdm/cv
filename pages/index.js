@@ -49,7 +49,7 @@ const IndexPage = () => {
       <MainContextProvider>
         <Headers />
         <PrintStyles />
-        <CV>
+        <CV data-cy="main">
           <Information />
           <CareerSummary />
           <SkillSet />

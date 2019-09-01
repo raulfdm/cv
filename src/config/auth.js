@@ -6,7 +6,12 @@ const logout = () => {
   window.location.href = '/login';
 };
 const login = ({ email, password }) => {
-  return firebase.auth().signInWithEmailAndPassword(email, password);
+  return firebase
+    .auth()
+    .setPersistence(firebase.auth.Auth.Persistence.NONE)
+    .then(() => {
+      return firebase.auth().signInWithEmailAndPassword(email, password);
+    });
 };
 
 export const useAuth = () => {
