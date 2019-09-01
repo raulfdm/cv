@@ -2,16 +2,16 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import firebase from 'src/config/firebase';
 
 const logout = () => {
-  firebase.auth().signOut();
-  window.location.href = '/login';
-};
-const login = ({ email, password }) => {
-  return firebase
+  firebase
     .auth()
-    .setPersistence(firebase.auth.Auth.Persistence.NONE)
+    .signOut()
     .then(() => {
-      return firebase.auth().signInWithEmailAndPassword(email, password);
+      window.location.href = '/login';
     });
+};
+
+const login = ({ email, password }) => {
+  return firebase.auth().signInWithEmailAndPassword(email, password);
 };
 
 export const useAuth = () => {
