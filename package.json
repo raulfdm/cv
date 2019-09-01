@@ -13,11 +13,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "prestart": "yarn build",
     "start": "next start",
     "lint": "eslint . --ext .js",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "test:ci": "start-server-and-test dev http://localhost:3000 cypress:run"
+    "test:ci": "start-server-and-test start http://localhost:3000 cypress:run"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
