@@ -20,7 +20,7 @@ const GeneralInfoContainer = () => {
         name: infoName,
         label: '',
         href: '',
-        position: Object.keys(fieldsetValues).length,
+        position: Object.keys(fieldsetValues) ? Object.keys(fieldsetValues).length : 0,
       },
     };
 
