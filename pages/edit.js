@@ -3,7 +3,6 @@ import { Form } from 'react-final-form';
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import Link from 'next/link';
-import axios from 'axios';
 import classnames from 'classnames';
 
 import { useData } from 'utils/useData';
@@ -31,21 +30,28 @@ const LogoutButtonWrapper = styled.div`
   text-align: right;
 `;
 
+const defaultValues = {
+  career_sumary: '',
+  experiences: {},
+  extra_courses: {},
+  formal_education: {},
+  general_info: {},
+  hard_skills: {},
+  headers: {},
+  interests: [],
+  languages: [],
+  projects: {},
+};
+
 const EditCv = () => {
   const [isSavingData, setIsSavingData] = React.useState(false);
+  const { data, submitCv } = useData();
 
-  const onSubmit = formValue => {
+  const onSubmit = async formValue => {
     setIsSavingData(true);
-    axios
-      .put('https://personal-cv-87ac0.firebaseio.com/new-cv.json', {
-        ...formValue,
-      })
-      .then(() => {
-        setIsSavingData(false);
-      });
+    await submitCv(formValue);
+    setIsSavingData(false);
   };
-
-  const { data } = useData('https://personal-cv-87ac0.firebaseio.com/new-cv.json');
 
   return (
     <main className="container">
@@ -59,7 +65,7 @@ const EditCv = () => {
       <Form
         onSubmit={onSubmit}
         initialValues={{
-          languages: [],
+          ...defaultValues,
           ...data,
         }}
         render={({ handleSubmit }) => {
