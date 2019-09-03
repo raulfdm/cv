@@ -43,12 +43,13 @@ const GeneralInfoContainer = () => {
   return (
     <FormCardGroup title="General Info">
       {fieldsetValues &&
-        Object.entries(fieldsetValues).map(([infoId, infoData]) => {
+        Object.entries(fieldsetValues).map(([infoId, infoData], index) => {
           const getFieldName = name => `${FIELDSET_NAME}.${infoId}.${name}`;
 
           return (
             <GeneralInfoForm
               key={infoId}
+              index={index}
               getFieldName={getFieldName}
               onDelete={onDelete(infoId)}
               {...infoData}

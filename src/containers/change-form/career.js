@@ -16,6 +16,7 @@ const CareerContainer = () => {
         name={FIELDSET_NAME}
         component="textarea"
         rows={10}
+        data-cy="career-summary-text"
       />
     </FormCardGroup>
   );

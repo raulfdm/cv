@@ -43,17 +43,20 @@ const EducationContainer = () => {
   return (
     <FormCardGroup title="Formal Education">
       {formal_education &&
-        Object.entries(formal_education).map(([educationId, education]) => {
+        Object.entries(formal_education).map(([educationId, education], index) => {
           return (
             <FormalEducationForm
               key={educationId}
+              index={index}
               prefix={`${FIELDSET_NAME}.${educationId}`}
               onDeleteEducation={onDeleteEducation(educationId)}
               {...education}
             />
           );
         })}
-      <AddNewButton onClick={onAddEducation}>Add new Formal Education</AddNewButton>
+      <AddNewButton onClick={onAddEducation} data-cy="formal-education-new">
+        Add new Formal Education
+      </AddNewButton>
     </FormCardGroup>
   );
 };

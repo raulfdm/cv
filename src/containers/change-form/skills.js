@@ -68,11 +68,12 @@ const SkillsContainer = () => {
   return (
     <FormCardGroup title="Skills">
       {fieldsetValues &&
-        Object.entries(fieldsetValues).map(([skillId, skill]) => {
+        Object.entries(fieldsetValues).map(([skillId, skill], index) => {
           const fieldName = `${FIELDSET_NAME}.${skillId}.values`;
           return (
             <TagField
               key={fieldName}
+              index={index}
               fieldName={fieldName}
               deleteSkill={onDeleteSkill(skillId)}
               onAddTag={onAddTag(fieldName, skillId)}

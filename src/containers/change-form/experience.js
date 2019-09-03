@@ -43,17 +43,20 @@ const ExperienceContainer = () => {
   return (
     <FormCardGroup title="Professional Experiences">
       {fieldsetValues &&
-        Object.entries(fieldsetValues).map(([id, experience]) => (
+        Object.entries(fieldsetValues).map(([id, experience], index) => (
           <Experience
             key={id}
             id={id}
+            index={index}
             prefix={`${FIELDSET_NAME}.${id}`}
             onDeleteExperience={removeExperience(id)}
             {...experience}
           />
         ))}
 
-      <AddNewButton onClick={addNewExperience}>Add new Field</AddNewButton>
+      <AddNewButton onClick={addNewExperience} data-cy="add-new-experience">
+        Add new Field
+      </AddNewButton>
     </FormCardGroup>
   );
 };
