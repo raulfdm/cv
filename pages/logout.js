@@ -1,12 +1,14 @@
 import { useEffect } from 'react';
-import { useAuth } from 'src/config/auth';
+import { useCvService } from 'src/config/useCvService';
 
 const Logout = () => {
-  const { logout } = useAuth();
+  const { service } = useCvService();
 
   useEffect(() => {
-    logout();
-  });
+    if (service) {
+      service.logout();
+    }
+  }, [service]);
 
   return null;
 };

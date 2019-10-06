@@ -1,22 +1,22 @@
 import { useState, useEffect } from 'react';
 import { useList } from 'react-firebase-hooks/database';
 
-import { useAuth } from 'src/config/auth';
+import { useAuth } from 'src/config/useCvService';
 import firebase from 'src/config/firebase';
 
-const save = userId => formData => {
-  return firebase
-    .database()
-    .ref(userId)
-    .set({ ...formData });
-};
+// const save = userId => formData => {
+//   return firebase
+//     .database()
+//     .ref(userId)
+//     .set({ ...formData });
+// };
 
 export function useData() {
   const [data, setData] = useState({});
 
   const { user } = useAuth();
 
-  const [snapshots, loading] = useList(firebase.database().ref(user.uid));
+  // const [snapshots, loading] = useList(firebase.database().ref(user.uid));
 
   useEffect(() => {
     if (snapshots.length > 0) {

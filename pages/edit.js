@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form } from 'react-final-form';
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import Link from 'next/link';
 import classnames from 'classnames';
 
-import { useData } from 'utils/useData';
+// import { useData } from 'utils/useData';
+// import { useCvService } from 'src/config/useCvService';
+import CvService from 'src/CvService';
 
 import ExtraCoursesContainer from 'containers/change-form/extra-courses';
 import HeadersContainer from 'containers/change-form/headers';
@@ -44,13 +46,33 @@ const defaultValues = {
 };
 
 const EditCv = () => {
-  const [isSavingData, setIsSavingData] = React.useState(false);
-  const { data, submitCv } = useData();
+  const [isSavingData, setIsSavingData] = useState(false);
+  const [data, setData] = useState({});
+  const [service, setService] = useState();
+
+  useEffect(() => {
+    setService(new CvService());
+  }, []);
+
+  useEffect(() => {
+    async function fetchData() {
+      const data = await service.getData();
+      setData(data);
+    }
+    if (service) {
+      fetchData();
+    }
+  }, [service]);
 
   const onSubmit = async formValue => {
     setIsSavingData(true);
-    await submitCv(formValue);
-    setIsSavingData(false);
+    try {
+      await service.saveData(formValue);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsSavingData(false);
+    }
   };
 
   return (
