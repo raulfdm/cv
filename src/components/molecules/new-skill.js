@@ -18,6 +18,7 @@ const NewSkill = ({ onAddSkill }) => {
     />
   ) : (
     <AddNewButton
+      data-cy="add-new-skill"
       onClick={() => {
         setIsAdding(true);
       }}

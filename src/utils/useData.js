@@ -1,20 +1,33 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useList } from 'react-firebase-hooks/database';
 
-const urlV0 = 'https://personal-cv-87ac0.firebaseio.com/new-cv.json';
+import { useAuth } from 'src/config/useCvService';
+import firebase from 'src/config/firebase';
 
-export function useData(url = urlV0) {
+// const save = userId => formData => {
+//   return firebase
+//     .database()
+//     .ref(userId)
+//     .set({ ...formData });
+// };
+
+export function useData() {
   const [data, setData] = useState({});
-  const [isLoadingData, setIsLoadingData] = useState(true);
+
+  const { user } = useAuth();
+
+  // const [snapshots, loading] = useList(firebase.database().ref(user.uid));
 
   useEffect(() => {
-    async function fetchData() {
-      const response = await axios.get(url);
-      setData(response.data || {});
-      setIsLoadingData(false);
-    }
-    fetchData();
-  }, []);
+    if (snapshots.length > 0) {
+      const sanatizedData = snapshots.reduce((acc, snap) => {
+        acc[snap.key] = snap.val();
+        return acc;
+      }, {});
 
-  return { data, isLoadingData };
+      setData(sanatizedData);
+    }
+  }, [loading]);
+
+  return { data, isLoadingData: loading, submitCv: save(user.uid) };
 }

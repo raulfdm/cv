@@ -7,7 +7,12 @@ const FIELDSET_NAME = 'interests';
 
 const InterestsContainer = () => {
   return (
-    <FormCardGroup title="Interests">
+    <FormCardGroup
+      title="Interests"
+      contentProps={{
+        'data-cy': 'interests',
+      }}
+    >
       <InputCreatable name={FIELDSET_NAME} />
     </FormCardGroup>
   );

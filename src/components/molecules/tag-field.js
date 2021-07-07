@@ -16,7 +16,15 @@ const InputWrapper = styled.div`
   display: flex;
 `;
 
-const TagField = ({ fieldName, onAddTag, name, values, deleteSkill, onConfirmLabelChange }) => {
+const TagField = ({
+  index,
+  fieldName,
+  onAddTag,
+  name,
+  values,
+  deleteSkill,
+  onConfirmLabelChange,
+}) => {
   const [inputValue, setInputValue] = React.useState('');
 
   return (
@@ -25,7 +33,7 @@ const TagField = ({ fieldName, onAddTag, name, values, deleteSkill, onConfirmLab
       render={({ input }) => {
         return (
           <FieldSet label={name} editable onConfirm={onConfirmLabelChange}>
-            <InputWrapper>
+            <InputWrapper data-cy={`tag-field-${index}`}>
               <Input
                 /* Accept multi tags */
                 isMulti
@@ -65,6 +73,7 @@ TagField.propTypes = {
   values: PropTypes.array,
   deleteSkill: PropTypes.func,
   onConfirmLabelChange: PropTypes.func,
+  index: PropTypes.number,
 };
 
 export default TagField;

@@ -24,16 +24,17 @@ const Sepator = styled.p`
   align-items: center;
 `;
 
-const Experience = ({ prefix, is_actual, onDeleteExperience }) => {
+const Experience = ({ prefix, is_actual, onDeleteExperience, index }) => {
   const getFieldName = name => `${prefix}.${name}`;
   return (
-    <Wrapper className="columns is-multiline">
+    <Wrapper className="columns is-multiline" data-cy={`experience-${index}`}>
       <div className="column is-half">
         <Field
           component="input"
           className="input"
           type="text"
           placeholder="Company Name"
+          data-cy="experience-company-name"
           name={getFieldName('company')}
           style={{ marginBottom: 10 }}
         />
@@ -45,6 +46,7 @@ const Experience = ({ prefix, is_actual, onDeleteExperience }) => {
               className="input"
               type="date"
               placeholder="2018-02-19"
+              data-cy="experience-start-date"
               name={getFieldName('start_date')}
             />
           </div>
@@ -58,6 +60,7 @@ const Experience = ({ prefix, is_actual, onDeleteExperience }) => {
                   className="input"
                   disabled={is_actual}
                   placeholder="2018-02-19"
+                  data-cy="experience-end-date"
                   {...input}
                   value={is_actual ? '' : input.value}
                 />
@@ -74,11 +77,17 @@ const Experience = ({ prefix, is_actual, onDeleteExperience }) => {
           type="text"
           placeholder="Role name"
           name={getFieldName('role')}
+          data-cy="experience-role"
           style={{ marginBottom: 10 }}
         />
         <label className="checkbox">
-          <Field component="input" type="checkbox" name={getFieldName('is_actual')} /> Current
-          Working there
+          <Field
+            component="input"
+            type="checkbox"
+            name={getFieldName('is_actual')}
+            data-cy="experience-actual-job"
+          />{' '}
+          Current Working there
         </label>
       </div>
 
@@ -87,10 +96,11 @@ const Experience = ({ prefix, is_actual, onDeleteExperience }) => {
           component="textarea"
           className="textarea"
           placeholder="Explain what you did/do there"
+          data-cy="experience-job-description"
           name={getFieldName('job_description')}
         />
       </div>
-      <ActionButton onClick={onDeleteExperience} />
+      <ActionButton onClick={onDeleteExperience} data-cy="delete-experience" />
     </Wrapper>
   );
 };
@@ -99,6 +109,7 @@ Experience.propTypes = {
   prefix: PropTypes.string,
   is_actual: PropTypes.boolean,
   onDeleteExperience: PropTypes.func,
+  index: PropTypes.number,
 };
 
 export default Experience;

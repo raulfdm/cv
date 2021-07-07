@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SingleInputActions = ({ label, inputValue, inputProps, onConfirm, onCancel }) => {
+const SingleInputActions = ({ label, inputValue = '', inputProps, onConfirm, onCancel }) => {
   const [localInputValue, setInputValue] = React.useState(inputValue);
 
   React.useEffect(() => {
@@ -22,6 +22,7 @@ const SingleInputActions = ({ label, inputValue, inputProps, onConfirm, onCancel
             className="input"
             value={localInputValue}
             type="text"
+            data-cy="single-input-actions-input"
             {...inputProps}
             onChange={handleInputChange}
           />
@@ -31,6 +32,7 @@ const SingleInputActions = ({ label, inputValue, inputProps, onConfirm, onCancel
         <div className="control">
           <button
             className="button is-link"
+            data-cy="single-input-actions-confirm"
             onClick={() => {
               onConfirm(localInputValue);
               setInputValue('');
@@ -40,7 +42,11 @@ const SingleInputActions = ({ label, inputValue, inputProps, onConfirm, onCancel
           </button>
         </div>
         <div className="control">
-          <button className="button is-text" onClick={onCancel}>
+          <button
+            className="button is-text"
+            data-cy="single-input-actions-cancel"
+            onClick={onCancel}
+          >
             Cancel
           </button>
         </div>

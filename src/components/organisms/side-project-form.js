@@ -22,11 +22,11 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
-const SideProjectForm = ({ is_actual, prefix, onDeleteProject }) => {
+const SideProjectForm = ({ is_actual, prefix, onDeleteProject, index }) => {
   const getFieldName = fieldName => `${prefix}.${fieldName}`;
 
   return (
-    <Wrapper>
+    <Wrapper data-cy={`side-project-${index}`}>
       <div className="field">
         <label className="label">Name</label>
         <div className="control">
@@ -35,6 +35,7 @@ const SideProjectForm = ({ is_actual, prefix, onDeleteProject }) => {
             className="input"
             type="text"
             placeholder="Computer Science"
+            data-cy="side-project-name"
             name={getFieldName('project_name')}
           />
         </div>
@@ -52,6 +53,7 @@ const SideProjectForm = ({ is_actual, prefix, onDeleteProject }) => {
                     className="input"
                     type="date"
                     placeholder="2018-02-19"
+                    data-cy="side-project-start-date"
                     name={getFieldName('start_date')}
                   />
                 </div>
@@ -66,6 +68,7 @@ const SideProjectForm = ({ is_actual, prefix, onDeleteProject }) => {
                         className="input"
                         disabled={is_actual}
                         placeholder="2018-02-19"
+                        data-cy="side-project-end-date"
                         {...props.input}
                         value={is_actual ? '' : props.input.value}
                       />
@@ -78,8 +81,13 @@ const SideProjectForm = ({ is_actual, prefix, onDeleteProject }) => {
           <CheckboxWrapper className="field">
             <div className="control">
               <label className="checkbox">
-                <Field component="input" type="checkbox" name={getFieldName('is_actual')} /> In
-                Progress
+                <Field
+                  component="input"
+                  type="checkbox"
+                  data-cy="side-project-actual"
+                  name={getFieldName('is_actual')}
+                />{' '}
+                In Progress
               </label>
             </div>
           </CheckboxWrapper>
@@ -93,18 +101,20 @@ const SideProjectForm = ({ is_actual, prefix, onDeleteProject }) => {
             component="textarea"
             className="textarea"
             placeholder="Explain what you did/do there"
+            data-cy="side-project-description"
             name={getFieldName('description')}
           />
         </div>
       </div>
 
       <hr />
-      <ActionButton onClick={onDeleteProject} />
+      <ActionButton onClick={onDeleteProject} data-cy="side-project-delete" />
     </Wrapper>
   );
 };
 
 SideProjectForm.propTypes = {
+  index: PropTypes.number,
   input: PropTypes.object,
   is_actual: PropTypes.bool,
   onDeleteProject: PropTypes.func,

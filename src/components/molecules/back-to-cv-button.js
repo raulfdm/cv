@@ -8,10 +8,10 @@ const GoBackToCv = styled.a`
   text-decoration: underline;
 `;
 
-const BackToCvButton = () => {
+const BackToCvButton = props => {
   return (
     <Link href="/">
-      <GoBackToCv>Go back to the CV</GoBackToCv>
+      <GoBackToCv {...props}>Go back to the CV</GoBackToCv>
     </Link>
   );
 };

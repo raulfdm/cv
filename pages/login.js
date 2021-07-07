@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import { Form, Field } from 'react-final-form';
 
-import { useAuth } from 'src/config/auth';
+import { useCvService } from 'src/config/useCvService';
 import { GlobalFullHeight } from 'src/styles/globals';
 import Layout from 'components/layout';
 import BackToCvButton from 'molecules/back-to-cv-button';
@@ -76,23 +76,26 @@ const Title = styled.h1`
 `;
 
 const Login = () => {
-  const { isAuth, login } = useAuth();
+  const { service } = useCvService();
   const [error, setError] = React.useState('');
 
   const signIn = authForm => {
-    login(authForm)
+    service
+      .login(authForm.email, authForm.password)
       .then(() => {
+        alert('sucess');
         window.location.href = '/edit';
         setError('');
       })
-      .catch(() => {
+      .catch(e => {
+        console.log('aisiasok', e);
         setError('User not registered');
       });
   };
 
-  if (isAuth) {
-    window.location.href = '/edit';
-  }
+  // if (isAuth) {
+  //   window.location.href = '/edit';
+  // }
 
   return (
     <Layout>
@@ -119,13 +122,15 @@ const Login = () => {
                 placeholder="Your secrets here"
                 required
               />
-              <StyldButton type="submit">Login</StyldButton>
+              <StyldButton type="submit" data-cy="btn-login">
+                Login
+              </StyldButton>
             </StyledForm>
           );
         }}
       />
-      {error && <ErrorLabel>{error}</ErrorLabel>}
-      <BackToCvButton />
+      {error && <ErrorLabel data-cy="error-message">{error}</ErrorLabel>}
+      <BackToCvButton data-cy="back-to-home" />
     </Layout>
   );
 };

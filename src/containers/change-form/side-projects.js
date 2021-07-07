@@ -41,15 +41,18 @@ const SideProjectsContainer = () => {
   return (
     <FormCardGroup title="Side Projects">
       {fieldsetValues &&
-        Object.entries(fieldsetValues).map(([projectId, projectData]) => (
+        Object.entries(fieldsetValues).map(([projectId, projectData], index) => (
           <SideProjectForm
             key={projectId}
+            index={index}
             prefix={`${FIELDSET_NAME}.${projectId}`}
             onDeleteProject={onDeleteProject(projectId)}
             {...projectData}
           />
         ))}
-      <AddNewButton onClick={onAddProject}>Add new Project</AddNewButton>
+      <AddNewButton onClick={onAddProject} data-cy="add-new-side-project">
+        Add new Project
+      </AddNewButton>
     </FormCardGroup>
   );
 };

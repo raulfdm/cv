@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form } from 'react-final-form';
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
-import axios from 'axios';
+import Link from 'next/link';
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
 
-import { useData } from 'utils/useData';
+// import { useData } from 'utils/useData';
+// import { useCvService } from 'src/config/useCvService';
+import CvService from 'src/CvService';
 
 import ExtraCoursesContainer from 'containers/change-form/extra-courses';
 import HeadersContainer from 'containers/change-form/headers';
@@ -31,35 +32,62 @@ const LogoutButtonWrapper = styled.div`
   text-align: right;
 `;
 
-const EditCv = ({ authProps }) => {
-  const [isSavingData, setIsSavingData] = React.useState(false);
+const defaultValues = {
+  career_sumary: '',
+  experiences: {},
+  extra_courses: {},
+  formal_education: {},
+  general_info: {},
+  hard_skills: {},
+  headers: {},
+  interests: [],
+  languages: [],
+  projects: {},
+};
 
-  const onSubmit = formValue => {
+const EditCv = () => {
+  const [isSavingData, setIsSavingData] = useState(false);
+  const [data, setData] = useState({});
+  const [service, setService] = useState();
+
+  useEffect(() => {
+    setService(new CvService());
+  }, []);
+
+  useEffect(() => {
+    async function fetchData() {
+      const data = await service.getData();
+      setData(data);
+    }
+    if (service) {
+      fetchData();
+    }
+  }, [service]);
+
+  const onSubmit = async formValue => {
     setIsSavingData(true);
-    axios
-      .put('https://personal-cv-87ac0.firebaseio.com/new-cv.json', {
-        ...formValue,
-      })
-      .then(() => {
-        setIsSavingData(false);
-      });
+    try {
+      await service.saveData(formValue);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsSavingData(false);
+    }
   };
-
-  const { data } = useData('https://personal-cv-87ac0.firebaseio.com/new-cv.json');
 
   return (
     <main className="container">
       <GlobalStyles />
       <LogoutButtonWrapper>
-        <a className="is-primary" onClick={authProps.logout}>
-          Logout
-        </a>
+        <Link href="/logout">
+          <a className="is-primary">Logout</a>
+        </Link>
       </LogoutButtonWrapper>
 
       <Form
         onSubmit={onSubmit}
         initialValues={{
-          languages: [],
+          ...defaultValues,
           ...data,
         }}
         render={({ handleSubmit }) => {
@@ -99,10 +127,6 @@ const EditCv = ({ authProps }) => {
       />
     </main>
   );
-};
-
-EditCv.propTypes = {
-  authProps: PropTypes.object,
 };
 
 export default withAuthProtection(EditCv);

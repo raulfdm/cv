@@ -22,11 +22,11 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
-const FormalEducationForm = ({ is_actual, prefix, onDeleteEducation }) => {
+const FormalEducationForm = ({ is_actual, prefix, onDeleteEducation, index }) => {
   const getFieldName = fieldName => `${prefix}.${fieldName}`;
 
   return (
-    <Wrapper>
+    <Wrapper data-cy={`formal-education-${index}`}>
       <div className="field is-horizontal">
         <div className="field-body">
           <div className="field">
@@ -37,6 +37,7 @@ const FormalEducationForm = ({ is_actual, prefix, onDeleteEducation }) => {
                 className="input"
                 type="text"
                 placeholder="Computer Science"
+                data-cy="formal-education-name"
                 name={getFieldName('name')}
               />
             </div>
@@ -50,6 +51,7 @@ const FormalEducationForm = ({ is_actual, prefix, onDeleteEducation }) => {
                 className="input"
                 type="text"
                 placeholder="MIT University"
+                data-cy="formal-education-foundation"
                 name={getFieldName('foundation')}
               />
             </div>
@@ -69,6 +71,7 @@ const FormalEducationForm = ({ is_actual, prefix, onDeleteEducation }) => {
                     className="input"
                     type="date"
                     placeholder="2018-02-19"
+                    data-cy="formal-education-start-date"
                     name={getFieldName('start_date')}
                   />
                 </div>
@@ -83,6 +86,7 @@ const FormalEducationForm = ({ is_actual, prefix, onDeleteEducation }) => {
                         className="input"
                         disabled={is_actual}
                         placeholder="2018-02-19"
+                        data-cy="formal-education-end-date"
                         {...props.input}
                         value={is_actual ? '' : props.input.value}
                       />
@@ -95,13 +99,18 @@ const FormalEducationForm = ({ is_actual, prefix, onDeleteEducation }) => {
           <CheckboxWrapper className="field">
             <div className="control">
               <label className="checkbox">
-                <Field component="input" type="checkbox" name={getFieldName('is_actual')} /> In
-                Progress
+                <Field
+                  component="input"
+                  type="checkbox"
+                  data-cy="formal-education-actual"
+                  name={getFieldName('is_actual')}
+                />{' '}
+                In Progress
               </label>
             </div>
           </CheckboxWrapper>
         </div>
-        <ActionButton onClick={onDeleteEducation} />
+        <ActionButton onClick={onDeleteEducation} data-cy="formal-education-delete" />
       </div>
       <hr />
     </Wrapper>
@@ -110,6 +119,7 @@ const FormalEducationForm = ({ is_actual, prefix, onDeleteEducation }) => {
 
 FormalEducationForm.propTypes = {
   is_actual: PropTypes.boolean,
+  index: PropTypes.number,
   prefix: PropTypes.string,
   onDeleteEducation: PropTypes.func,
   input: PropTypes.object,

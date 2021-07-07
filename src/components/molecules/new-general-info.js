@@ -10,6 +10,9 @@ const NewGeneralInfo = ({ onAddInfo }) => {
   return isAdding ? (
     <SingleInputActions
       label="Info Name"
+      inputProps={{
+        'data-cy': 'new-info-name',
+      }}
       onConfirm={name => {
         onAddInfo(name);
         setIsAdding(false);
@@ -18,6 +21,7 @@ const NewGeneralInfo = ({ onAddInfo }) => {
     />
   ) : (
     <AddNewButton
+      data-cy="new-general-info"
       onClick={() => {
         setIsAdding(true);
       }}

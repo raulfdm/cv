@@ -7,7 +7,12 @@ const FIELDSET_NAME = 'languages';
 
 const LanguagesContainer = () => {
   return (
-    <FormCardGroup title="Languages">
+    <FormCardGroup
+      title="Languages"
+      contentProps={{
+        'data-cy': 'languages',
+      }}
+    >
       <InputCreatable name={FIELDSET_NAME} />
     </FormCardGroup>
   );
